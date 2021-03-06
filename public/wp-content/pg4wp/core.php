@@ -31,6 +31,9 @@ $replaces = array(
 );
 // Ensure class uses the replaced mysql_ functions rather than mysqli_
 define( 'WP_USE_EXT_MYSQL', true);
+
+echo 'DB PATH: ' . ABSPATH. '/wp-includes/wp-db.php';
+
 eval( str_replace( array_keys($replaces), array_values($replaces), file_get_contents(ABSPATH.'/wp-includes/wp-db.php')));
 
 // Create wpdb object if not already done
