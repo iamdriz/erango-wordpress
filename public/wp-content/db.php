@@ -26,10 +26,10 @@ define( 'PG4WP_INSECURE', false);
 
 // This defines the directory where PG4WP files are loaded from
 //   2 places checked : wp-content and wp-content/plugins
-if( file_exists( ABSPATH.'/wp-content/pg4wp'))
-	define( 'PG4WP_ROOT', ABSPATH.'/wp-content/pg4wp');
+if( file_exists( ABSPATH.'../wp-content/pg4wp'))
+	define( 'PG4WP_ROOT', ABSPATH.'../wp-content/pg4wp');
 else
-	define( 'PG4WP_ROOT', ABSPATH.'/wp-content/plugins/pg4wp');
+	define( 'PG4WP_ROOT', ABSPATH.'../wp-content/plugins/pg4wp');
 
 // Here happens all the magic
 require_once( PG4WP_ROOT.'/core.php');
