@@ -12,7 +12,7 @@
     <div class="header">
         <div class="container">
             <a class="logo" href="#" data-aos="fade-down">
-                <img src="logo.png">
+                <img src="<?php bloginfo('template_directory'); ?>/logo.png">
             </a>
             <nav class="" data-aos="fade-down">
                 <ul>

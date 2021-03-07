@@ -16,7 +16,7 @@
                 <div class="columns is-align-center">
                     <div class="col-4">
                         <figure class="" data-aos="fade">
-                            <img src="icon.png" width="640" height="640">
+                            <img src="<?php bloginfo('template_directory'); ?>/icon.png" width="640" height="640">
                         </figure>
                     </div>
                     <div class="col-7 offset-1">
