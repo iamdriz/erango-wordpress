@@ -11,6 +11,6 @@
         }
     },
     "addons": [
-        "postgres"
+        "jawsdb"
     ]
 }
