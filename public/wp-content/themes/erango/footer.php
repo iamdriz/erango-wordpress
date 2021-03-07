@@ -47,16 +47,16 @@
                     <nav id="footer-menu" class="footer-nav">
                         <ul class="">
                             <li class="">
-                                <a class="" href="#">Cookies</a>
+                                <a class="" href="<?php bloginfo('home'); ?>">Cookies</a>
                             </li>
                             <li class="">
-                                <a class="" href="#">Privacy Policy</a>
+                                <a class="" href="<?php bloginfo('home'); ?>">Privacy Policy</a>
                             </li>
                             <li class="">
-                                <a class="" href="#">GDPR</a>
+                                <a class="" href="<?php bloginfo('home'); ?>">GDPR</a>
                             </li>
                             <li class="">
-                                <a class="" href="#">Contact</a>
+                                <a class="" href="<?php bloginfo('home'); ?>">Contact</a>
                             </li>
                         </ul>
                     </nav>
@@ -101,97 +101,6 @@
             });
         });
     </script>
-
-    <style>
-        .slick-slider {
-            display: flex !important;
-            justify-content: center;
-            align-items: center;
-            gap: 32px;
-        }
-
-        .slick-slide {
-            display: flex !important;
-            justify-content: center;
-            padding: 0 16px;
-        }
-
-        .slick-prev,
-        .slick-next {
-            display: flex !important;
-            justify-content: center;
-            align-items: center;
-            flex-shrink: 0;
-            color: var(--orange);
-            font-size: 24px;
-            line-height: 32px;
-            width: 48px;
-            height: 48px;
-            border-radius: 999em;
-            transition: .2s ease-in-out;
-        }
-
-        .slick-prev:hover,
-        .slick-next:hover {
-            background-color: rgba(0, 0, 0, .125);
-        }
-
-        .slick-list {
-            position: relative;
-        }
-
-        .slick-list:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            width: 16px;
-            z-index: 2;
-            background: linear-gradient(to right, #eee, transparent);
-        }
-
-        .slick-list:after {
-            content: '';
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            right: 0;
-            width: 16px;
-            z-index: 2;
-            background: linear-gradient(to left, #eee, transparent);
-        }
-
-        .slick-dotted {
-            padding-bottom: calc(48px - 8px);
-        }
-
-        .slick-dots {
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            list-style: none;
-            gap: 8px;
-        }
-
-        .slick-dots li {
-            text-indent: -999em;
-            width: 8px;
-            height: 8px;
-            border: var(--blue) 2px solid;
-            border-radius: 999em;
-        }
-
-        .slick-dots li.slick-active {
-            background-color: var(--orange);
-            border-color: var(--orange);
-        }
-    </style>
-
 </body>
 
 </html>
