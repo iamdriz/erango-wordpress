@@ -12,7 +12,7 @@
                     <a href="#"><i class="fab fa-twitter"></i> @erango</a>
                 </li>
             </ul>
-            <a class="button button--large button--white">Get in touch</a>
+            <a class="button button--large button--white" href="/contact">Get in touch</a>
         </div>
     </div>
     <div class="footer">
@@ -41,7 +41,7 @@
                                     class="fab fa-linkedin"></i></a>
                         </li>
                     </ul>
-                    <p>Copyright &copy; 2021 Erango. All rights reserved.</p>
+                    <p>Copyright &copy; <?php echo date('Y'); ?> <?php echo bloginfo('sitetitle') ?>. All rights reserved.</p>
                 </div>
                 <div class="footer-column footer-column__right">
                     <nav id="footer-menu" class="footer-nav">
@@ -59,6 +59,11 @@
                                 <a class="" href="<?php bloginfo('home'); ?>">Contact</a>
                             </li>
                         </ul>
+                        <?php wp_nav_menu( array( 
+                        'theme_location' => 'footer-menu', 
+                        'container' => 'nav',
+                        'container_class' => '',
+                        'fallback_cb' => false ) ); ?>
                     </nav>
                 </div>
             </div>
@@ -100,7 +105,56 @@
                 }]
             });
         });
+
+        var lastScrollTop = 0;
+
+        $(window).scroll(function(event){
+            fixedHeader();
+        });
+
+        $(document).ready(function(){
+            fixedHeader();
+        });
+
+        function fixedHeader() {
+            var scrollTop = $(this).scrollTop();
+            var headerHeight = 128; // we cant get this dynamically due to the changing height
+            var threshold = ($(window).height() / 2);
+            var delta = 16;
+
+            if(Math.abs(lastScrollTop - scrollTop) <= delta) return;
+
+            // Make header fixed to the viewport once scrolled past
+            if(scrollTop > headerHeight) {
+                $('.header').addClass('header--fixed'); 
+            } else {
+                $('.header').removeClass('header--fixed');
+            }
+
+            // Make header transitionable once scrolled past the threshold minus the header
+            // This is to prevent the header from animating when the header becomes fixed
+            // Remove to disable animations on the header entirely
+            if(scrollTop > (threshold - headerHeight)) {
+                $('.header').addClass('header--transitionable');
+            } else {
+                $('.header').removeClass('header--transitionable');
+            }
+
+            // Make header visible if scrolling up and past the threshold
+            if(scrollTop > threshold) {
+                if (scrollTop > lastScrollTop) {
+                    $('.header').removeClass('header--fixed--visible');
+                } else {
+                    $('.header').addClass('header--fixed--visible');
+                }
+            } else {
+                $('.header').removeClass('header--fixed--visible');
+            }
+            
+            lastScrollTop = scrollTop;
+        }
     </script>
+    <?php wp_footer(); ?>
 </body>
 
 </html>

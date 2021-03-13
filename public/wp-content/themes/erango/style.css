@@ -9,6 +9,7 @@ Version: 0.1
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 @import 'css/fontawesome.css';
 @import 'css/columns.css';
@@ -32,7 +33,7 @@ Version: 0.1
 body {
     font-size: 16px;
     line-height: 24px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: var(--white);
     color: var(--blue);
 }
@@ -60,6 +61,7 @@ h4,
 h5,
 h6 {
     font-weight: 800;
+    font-family: 'Poppins', sans-serif;
 }
 
 h1 {
@@ -132,17 +134,42 @@ h6 {
     margin-bottom: 16px;
 }
 
+main {
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 32px;
+    padding-right: 32px;
+
+    /* border: #00ff00 1px solid; */
+}
+
 .header {
     background-color: var(--blue);
-    height: 96px;
+    height: 128px;
     display: flex;
     align-items: center;
+    padding-top: 48px;
+    padding-bottom: 48px;
 }
 
 .header .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    max-width: 100%;
+}
+
+@media(min-width: 768px) {
+    .header .container {
+        padding-left: 48px;
+        padding-right: 48px;
+    }
 }
 
 .header .logo {
@@ -209,7 +236,7 @@ h6 {
 .masthead {
     background-color: var(--blue);
     color: var(--white);
-    min-height: calc(100vh - 96px);
+    min-height: calc(100vh - 128px);
     padding-top: 64px;
     padding-bottom: 64px;
     display: flex;
@@ -247,17 +274,6 @@ h6 {
 .section--blue {
     background-color: var(--blue);
     color: var(--white);
-}
-
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 32px;
-    padding-right: 32px;
-
-    /* border: #00ff00 1px solid; */
 }
 
 .color-orange {
@@ -304,10 +320,6 @@ h6 {
     cursor: pointer;
 }
 
-.button:hover {
-    transform: scale(1.1);
-}
-
 .button {
     gap: 8px;
 }
@@ -327,9 +339,17 @@ h6 {
     background-color: var(--orange);
     color: var(--white);
 }
+.button--orange:hover {
+    background-color: var(--blue);
+    color: var(--white);
+}
 
 .button--orange2 {
     background-color: var(--orange);
+    color: var(--white);
+}
+.button--orange2:hover {
+    background-color: var(--white);
     color: var(--blue);
 }
 
@@ -337,14 +357,30 @@ h6 {
     background-color: var(--white);
     color: var(--blue);
 }
+.button--white:hover {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
 
 
 .footer {
-    padding-top: 64px;
-    padding-bottom: 64px;
+    padding-top: 48px;
+    padding-bottom: 48px;
     border-top: var(--white) 32px solid;
     background-color: var(--blue);
     color: var(--white);
+}
+
+.footer .container {
+    max-width: 100%;
+}
+
+@media(min-width: 768px) {
+    .footer .container {
+        padding-left: 48px;
+        padding-right: 48px;
+    }
 }
 
 .footer-columns {
@@ -521,16 +557,17 @@ h6 {
     width: 48px;
     height: 48px;
     background-color: var(--orange);
+    color: var(--white);
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--white);
     transition: all .2s ease-in-out;
 }
 
 .social li a:hover {
-    transform: scale(1.2);
+    background-color: var(--white);
+    color: var(--blue);
 }
 
 /* .clients {
@@ -649,4 +686,35 @@ h6 {
 .slick-dots li.slick-active {
     background-color: var(--orange);
     border-color: var(--orange);
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--blue);
+    z-index: 100;
+}
+.header--transitionable {
+    transition: all .2s ease-in-out;
+}
+.header--fixed {
+    position: fixed;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    height: 80px;
+    transform: translateY(-100%);
+}
+.header--fixed--visible {
+    transform: translateY(0);
+    box-shadow: rgba(0,0,0, .125) 0 8px 16px;
+}
+
+body {
+    padding-top: 128px;
+}
+
+.admin-bar .header {
+    top: 32px;
 }

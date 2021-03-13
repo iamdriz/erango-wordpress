@@ -1,8 +1,9 @@
 <?php get_header(); ?>
 <main role="main">
+    <p>Index.php</p>
     <div class="section section--white">
     <div class="container">
-        <div style="height:100vh;"></div>
+        <?php get_template_part('template-parts/loop'); ?>
     </div>
     </div>
 </main>
