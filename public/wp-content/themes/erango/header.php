@@ -24,7 +24,7 @@
                     <li><a href="<?php bloginfo('home'); ?>/about">About</a></li>
                     <li><a href="<?php bloginfo('home'); ?>/contact/">Contact</a></li>
                 </ul>
-                <a href="<?php bloginfo('home'); ?>" class="button button--orange2"><i class="far fa-edit"></i> Request a demo</a>
+                <a href="<?php bloginfo('home'); ?>" class="button button--orange2">Request a Demo</a>
             </nav>
         </div>
     </div>

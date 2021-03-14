@@ -2,7 +2,6 @@
 
 <main role="main">
 <section class="section background-primary">
-	<p>Single.php</p>
 	<div class="container">
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>

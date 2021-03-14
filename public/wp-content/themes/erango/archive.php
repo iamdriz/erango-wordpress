@@ -1,7 +1,6 @@
 <?php get_header(); ?>
 
 <main role="main">
-	<p>Archive.php</p>
 	<section id="" class="section background-primary">
 		<div class="container">
 		<?php if (have_posts()) : ?>

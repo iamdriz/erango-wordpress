@@ -4,8 +4,11 @@
             <div class="container">
                 <div class="columns is-align-center">
                     <div class="col-5">
-                        <h1 class="color-orange" data-aos="zoom-in">Managing Competencies in a Complex business world.
+                        <h1 class="color-orange" data-aos="fade-in">Managing Competencies in a Complex business world.
                         </h1>
+                    </div>
+                    <div class="col-6 offset-1">
+                        <img class="tp" data-aos="fade-in" src="<?php bloginfo('template_directory'); ?>/masthead3.png">
                     </div>
                 </div>
             </div>
@@ -44,7 +47,7 @@
                     </div>
                     <div class="col-6 offset-1">
                         <figure class="" data-aos="fade-left">
-                            <img class="rounded" src="https://picsum.photos/640/640?random=2" width="640" height="640">
+                            <img src="<?php bloginfo('template_directory'); ?>/graphic1.svg">
                         </figure>
                     </div>
                 </div>
@@ -53,8 +56,7 @@
                         <div class="columns is-align-center">
                             <div class="col-6">
                                 <figure class="" data-aos="fade-right">
-                                    <img class="rounded" src="https://picsum.photos/640/640?random=3" width="640"
-                                        height="640">
+                                    <img src="<?php bloginfo('template_directory'); ?>/graphic2.svg">
                                 </figure>
                             </div>
                             <div class="col-5 offset-1">
@@ -135,7 +137,7 @@
                             rem
                             distinctio nemo.</p>
                     </div>
-                    <div class="card" data-aos="zoom-in">
+                    <!-- <div class="card" data-aos="zoom-in">
                         <div class="card__icon">
                             <i class="fad fa-database fa-fw"></i>
                         </div>
@@ -161,7 +163,7 @@
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus ad magni deserunt, quos, vel
                             rem
                             distinctio nemo.</p>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="" data-aos="fade">
                     <a class="button button--large button--orange2">Learn more <i class="far fa-chevron-right"></i></a>

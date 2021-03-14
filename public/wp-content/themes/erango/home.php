@@ -1,32 +1,15 @@
 <?php get_header(); ?>
 
 <main role="main">
-  <p>Home.php</p>
-<section id="" class="section background-primary">
-      <div class="container">
-      <?php
-      if (have_posts()) :
-        /* Start the Loop */
-        while (have_posts()) : the_post();
-      ?>
-            <!-- <h1 class="font-size-48 text-center margin-b-48"><?php the_title(); ?></h1>
-            <?php the_content(); ?> -->
-      <?php
-        endwhile;
-        /* End the Loop */
-      else :
-        // Nothing
-      endif;
-      ?>
+<section class="section section--orange">
+  <div class="container">
+  <?php $wp_query = new WP_Query(array('posts_per_page' => get_option('posts_per_page'), 'paged' => $paged)); ?>
 
-      <?php // $temp = $wp_query; $wp_query= null; ?>		
-			
-      <?php $wp_query = new WP_Query(array('posts_per_page' => get_option('posts_per_page'), 'paged' => $paged)); ?>
+      <h1 class="font-size-64 text-center margin-b-48">Blog</h1>
       
       <div class="post-list">
       <?php while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
-      <div <?php post_class(); ?> id="post-<?php the_ID(); ?>">         
-        <article class="post<?php if($count == 1) { echo ' first'; } ?>">
+      <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">         
           <figure class="post-thumbnail">
           <?php if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
             echo '<a href="'.get_permalink().'">';
@@ -44,19 +27,15 @@
             
             <?php /*<p class="who-when">by <a href="<?php echo get_author_posts_url(get_the_author_meta( 'ID' )); ?>"><?php the_author_meta('first_name'); ?> <?php the_author_meta('last_name'); ?></a> on <?php echo get_the_date() ?> </p>*/ ?>
 
-            <?php the_excerpt(); ?>
+            <?php //the_excerpt(); ?>
           
             <p class="postmetadata"><?php the_tags(__('Tags:', 'kubrick'), ', ', '<br />'); ?> <?php printf(__('Posted in %s', 'kubrick'), get_the_category_list(', ')); ?> | <?php edit_post_link(__('Edit', 'kubrick'), '', ' | '); ?>  <?php comments_popup_link(__('No Comments &#187;', 'kubrick'), __('1 Comment &#187;', 'kubrick'), __('% Comments &#187;', 'kubrick'), '', __('Comments Closed', 'kubrick') ); ?></p>
 
           </section>
         </article>
-        </div>
       <?php endwhile; ?>
       </div>
-
-      <?php // $wp_query = null; $wp_query = $temp; ?>
-
-      </div>
+  </div>
 </section>
 
 <section class="section background-blue">

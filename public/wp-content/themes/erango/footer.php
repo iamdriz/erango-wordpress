@@ -112,43 +112,25 @@
             fixedHeader();
         });
 
-        $(document).ready(function(){
-            fixedHeader();
-        });
-
         function fixedHeader() {
             var scrollTop = $(this).scrollTop();
-            var headerHeight = 128; // we cant get this dynamically due to the changing height
-            var threshold = ($(window).height() / 2);
-            var delta = 16;
+            var header = $('.header');
+            var threshold = 128;
 
-            if(Math.abs(lastScrollTop - scrollTop) <= delta) return;
-
-            // Make header fixed to the viewport once scrolled past
-            if(scrollTop > headerHeight) {
-                $('.header').addClass('header--fixed'); 
-            } else {
-                $('.header').removeClass('header--fixed');
-            }
-
-            // Make header transitionable once scrolled past the threshold minus the header
-            // This is to prevent the header from animating when the header becomes fixed
-            // Remove to disable animations on the header entirely
-            if(scrollTop > (threshold - headerHeight)) {
-                $('.header').addClass('header--transitionable');
-            } else {
-                $('.header').removeClass('header--transitionable');
-            }
-
-            // Make header visible if scrolling up and past the threshold
-            if(scrollTop > threshold) {
-                if (scrollTop > lastScrollTop) {
-                    $('.header').removeClass('header--fixed--visible');
+            if (scrollTop > lastScrollTop) { // scroll down
+                if(scrollTop > threshold) { // scrolled past the threshold
+                    header.addClass('header--hidden');
+                    header.removeClass('header--visible');
+                    setTimeout(function() { // wait until the header has hidden
+                        header.addClass('header--fixed');
+                    }, 200);
                 } else {
-                    $('.header').addClass('header--fixed--visible');
+                    header.removeClass('header--hidden header--visible');
                 }
-            } else {
-                $('.header').removeClass('header--fixed--visible');
+            } else { // scroll up
+                header.removeClass('header--hidden');
+                header.addClass('header--visible');
+                if(scrollTop === 0) header.removeClass('header--fixed'); // remove fixed when top
             }
             
             lastScrollTop = scrollTop;
