@@ -1,4 +1,6 @@
 var currentLeft;
+var featuresPrevItem;
+
 function featuresSetup() {
     var bodyWidth = $('#features-fixed .container').width();
     var cols = 3;
@@ -15,6 +17,7 @@ function featuresScroll() {
     var scrollBottom = scrollTop + windowHeight;
     var sectionTop = $("#features").offset().top;
     var top = sectionTop - scrollTop;
+    var clientsTop = $('#clients').offset().top;
 
     top = top < 0 ? 0 : top;
 
@@ -26,33 +29,37 @@ function featuresScroll() {
         var top = $(this).offset().top;
         var bottom = top + $(this).height();
         var itemInView = (top <= scrollBottom && bottom >= scrollBottom);
+        var item = $(this).data('item');
         if (itemInView) {
-            var item = $(this).data('item');
             featuresShowitem(item);
+        } else {
+            var lastItem = $(".targets:last-child").data('item');
+            if(item == lastItem && featuresPrevItem === lastItem) {
+                $("#features-fixed").css({
+                    top: (clientsTop - scrollTop) - windowHeight + "px",
+                });
+            }
         }
     });
 }
 
-var featuresPrevItem;
 function featuresShowitem(item) {
-    if (featuresPrevItem !== item) {
-        featuresPrevItem = item;
-        var width = $('#features-fixed .container').width();
-        var cols = 3;
-        // returns the page number matching the item (e.g. 1,2,3 = 1, 2,3,4 = 2)
-        var page = Math.ceil(item/cols) - 1;
-        var left = (width * page) * -1;
-        if(currentLeft !== left) {
-            $("#features-fixed .body .wrapper").css({ left: left+'px' });
-            currentLeft = left;
-        }
+    if (featuresPrevItem === item) return;
+
+    featuresPrevItem = item;
+    var width = $('#features-fixed .container').width();
+    var cols = 3;
+    // returns the page number matching the item (e.g. 1,2,3 = 1, 2,3,4 = 2)
+    var page = Math.ceil(item/cols) - 1;
+    var left = (width * page) * -1;
+    if(currentLeft !== left) {
+        $("#features-fixed .body .wrapper").css({ left: left+'px' });
+        currentLeft = left;
     }
 }
 
 $(document).ready(function () {
-    setTimeout(function(){
-        featuresSetup();
-    }, 250);
+    featuresSetup();
 });
 
 $(window).scroll(function(){
