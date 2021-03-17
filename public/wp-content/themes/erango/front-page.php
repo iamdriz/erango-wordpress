@@ -171,7 +171,7 @@
                                         distinctio nemo.</p>
                                 </div>
                             </div>
-                            <!-- <div class="item">
+                            <div class="item">
                                 <div class="card" data-aos="zoom-in">
                                     <div class="card__icon">
                                         <i class="fad fa-headset fa-fw"></i>
@@ -181,7 +181,7 @@
                                         rem
                                         distinctio nemo.</p>
                                 </div>
-                            </div> -->
+                            </div>
                         </div>
                     </div>
                     <!-- <div class="" data-aos="fade">
@@ -192,7 +192,7 @@
         </div>
         <div class="targets-wrapper">
             <div class="targets" data-item="1"></div><div class="targets" data-item="2"></div><div class="targets" data-item="3"></div><div class="targets" data-item="4"></div><div class="targets" data-item="5"></div><div class="targets" data-item="6"></div><div class="targets" data-item="7"></div><div class="targets" data-item="8"></div>
-            <!-- <div class="targets" data-item="9"></div> -->
+            <div class="targets" data-item="9"></div>
         </div>
 
         <!--<div class="section section--blue text-center">

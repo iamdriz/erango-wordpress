@@ -1,7 +1,7 @@
 var currentLeft;
 function featuresSetup() {
     var bodyWidth = $('#features-fixed .container').width();
-    var cols = 4;
+    var cols = 3;
     var width = bodyWidth / cols;
     currentLeft = 0;
     $('#features-fixed .body .wrapper .item').css('width', width+'px');
@@ -25,8 +25,8 @@ function featuresScroll() {
     $(".targets").each(function (index, el) {
         var top = $(this).offset().top;
         var bottom = top + $(this).height();
-        var itemsInView = (top <= scrollBottom && bottom >= scrollBottom);
-        if (itemsInView) {
+        var itemInView = (top <= scrollBottom && bottom >= scrollBottom);
+        if (itemInView) {
             var item = $(this).data('item');
             featuresShowitem(item);
         }
@@ -38,7 +38,7 @@ function featuresShowitem(item) {
     if (featuresPrevItem !== item) {
         featuresPrevItem = item;
         var width = $('#features-fixed .container').width();
-        var cols = 4;
+        var cols = 3;
         // returns the page number matching the item (e.g. 1,2,3 = 1, 2,3,4 = 2)
         var page = Math.ceil(item/cols) - 1;
         var left = (width * page) * -1;
