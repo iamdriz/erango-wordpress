@@ -136,6 +136,7 @@
             lastScrollTop = scrollTop;
         }
     </script>
+    <script src="<?php bloginfo('template_directory'); ?>/scrolljacking.js"></script>
     <?php wp_footer(); ?>
 </body>
 
