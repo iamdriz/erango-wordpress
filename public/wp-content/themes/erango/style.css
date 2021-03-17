@@ -13,6 +13,7 @@ Version: 0.1
 
 @import 'css/fontawesome.css';
 @import 'css/columns.css';
+@import 'css/prose.css';
 
 * {
     margin: 0;

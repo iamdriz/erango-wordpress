@@ -6,10 +6,11 @@
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-		<div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-			<h1 class="font-size-48 text-center margin-b-48"><?php the_title(); ?></h1>
+		<div <?php //post_class(); ?> id="post-<?php the_ID(); ?>">
+		
+			<h1 class="text-center margin-b-48"><?php the_title(); ?></h1>
 
-			<div class="entry">
+			<div class="prose">
 				<?php the_content('<p class="serif">' . __('Read the rest of this entry &raquo;', 'kubrick') . '</p>'); ?>
 
 				<?php wp_link_pages(array('before' => '<p><strong>' . __('Pages:', 'kubrick') . '</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
@@ -48,7 +49,7 @@
 			</div>
 		</div>
 
-	<?php comments_template(); ?>
+	<?php //comments_template(); ?>
 
 	<?php endwhile; else: ?>
 
