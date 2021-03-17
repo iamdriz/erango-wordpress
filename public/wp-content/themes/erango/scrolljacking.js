@@ -1,11 +1,9 @@
-var currentLeft;
 var featuresPrevItem;
+var cols = 3;
 
 function featuresSetup() {
     var bodyWidth = $('#features-fixed .container').width();
-    var cols = 3;
     var width = bodyWidth / cols;
-    currentLeft = 0;
     $('#features-fixed .body .wrapper .item').css('width', width+'px');
     $('#features-fixed .body .wrapper').css('left', '0px');
     featuresScroll();
@@ -48,14 +46,9 @@ function featuresShowitem(item) {
 
     featuresPrevItem = item;
     var width = $('#features-fixed .container').width();
-    var cols = 3;
-    // returns the page number matching the item (e.g. 1,2,3 = 1, 2,3,4 = 2)
     var page = Math.ceil(item/cols) - 1;
     var left = (width * page) * -1;
-    if(currentLeft !== left) {
-        $("#features-fixed .body .wrapper").css({ left: left+'px' });
-        currentLeft = left;
-    }
+    $("#features-fixed .body .wrapper").css({ left: left+'px' });
 }
 
 $(document).ready(function () {
