@@ -24,9 +24,10 @@ Version: 0.1
 }
 
 :root {
-    --white: rgb(255, 255, 255);
-    --orange: rgb(238, 160, 80);
-    --blue: rgb(23, 41, 75);
+    --white: #ffffff;
+    --black: #000000;
+    --orange: #F0A151;
+    --blue: #12284c;
     --off-white: rgb(238, 238, 238);
 }
 
