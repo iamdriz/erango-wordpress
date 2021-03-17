@@ -1,4 +1,4 @@
-<div class="section section--orange text-center">
+<div class="section section--orange section--paper-plane text-center">
         <div class="container">
             <h2 class="text-center margin-b-48">Contact us</h2>
             <ul class="contact-links">

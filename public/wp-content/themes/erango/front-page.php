@@ -88,7 +88,7 @@
                         <div class="card__icon">
                             <i class="fad fa-monitor-heart-rate fa-fw"></i>
                         </div>
-                        <h3 class="margin-b-16">Monitor and measure staff compliance</h3>
+                        <h3 class="font-size-xl margin-b-16">Monitor and measure staff compliance</h3>
                         <p>Assign skill profiles to jobs and then to people, Erango can then cross reference the two to
                             check for compliance and training gaps.</p>
                     </div>
@@ -96,7 +96,7 @@
                         <div class="card__icon">
                             <i class="fad fa-chalkboard-teacher fa-fw"></i>
                         </div>
-                        <h3 class="margin-b-16">Automatically enrol staff onto training courses</h3>
+                        <h3 class="font-size-xl margin-b-16">Automatically enrol staff onto training courses</h3>
                         <p>Required for their role and deliver that training either through the inbuilt e-learning
                             platform,
                             classroom-based learning or a blend of the two.</p>
@@ -105,21 +105,19 @@
                         <div class="card__icon">
                             <i class="fad fa-mobile-alt fa-fw"></i>
                         </div>
-                        <h3 class="margin-b-16">Mobile compatible app available</h3>
+                        <h3 class="font-size-xl margin-b-16">Mobile compatible app available</h3>
                         <p>Allowing staff members to view their training and compliance on their mobile devices if
                             required.
                         </p>
                     </div>
                     <div class="card" data-aos="zoom-in">
                         <div class="card__icon">
-                            <i class="fad fa-analytics fa-fw"></i>
+                            <i class="fad fa-users-class fa-fw"></i>
                         </div>
-                        <h3 class="margin-b-16">Title</h3>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus ad magni deserunt, quos, vel
-                            rem
-                            distinctio nemo.</p>
+                        <h3 class="font-size-xl margin-b-16">Data captured using keypad technology</h3>
+                        <p>With the use of our classroom kits, face-to- face training can be delivered, allowing you to train and assess knowledge in the group.</p>
                     </div>
-                    <div class="card" data-aos="zoom-in">
+                    <!-- <div class="card" data-aos="zoom-in">
                         <div class="card__icon">
                             <i class="fad fa-box-check fa-fw"></i>
                         </div>
@@ -137,7 +135,7 @@
                             rem
                             distinctio nemo.</p>
                     </div>
-                    <!-- <div class="card" data-aos="zoom-in">
+                    <div class="card" data-aos="zoom-in">
                         <div class="card__icon">
                             <i class="fad fa-database fa-fw"></i>
                         </div>
@@ -173,7 +171,7 @@
         <div class="section section--off-white">
             <div class="container">
                 <h2 class="text-center margin-b-48" data-aos="fade">Who we've worked with</h2>
-                <div class="clients" data-aos="zoom-in">
+                <div class="clients" data-aos="fade">
                     <div class="client">
                         <img src="<?php bloginfo('template_directory'); ?>/client.png">
                     </div>

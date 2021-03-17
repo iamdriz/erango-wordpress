@@ -443,7 +443,7 @@ main {
 
 .cards {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 33.3%));
+    grid-template-columns: repeat(4, minmax(0, 25%));
     gap: 32px;
     margin-bottom: 48px;
 }
@@ -735,4 +735,11 @@ body {
     padding: 32px;
     background-color: var(--white);
     border-radius: 32px;
+}
+
+.section--paper-plane {
+    background-image: url('paper-plane.svg');
+    background-position: bottom right 25%;
+    background-repeat: no-repeat;
+    background-size: auto 50%;
 }
