@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?php wp_title('&laquo;', true, 'right'); ?> <?php bloginfo('name'); ?></title>
     <?php wp_head(); ?>
-    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/style.css">
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/aos@next/dist/aos.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
 </head>

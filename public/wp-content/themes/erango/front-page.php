@@ -78,7 +78,7 @@
         <div class="section section--blue section--full-height text-center" id="features">
             <div id="features-fixed" class="section--blue">
                 <div class="container">
-                    <h2 class="color-orange text-center" data-aos="fade">Erango provides audit history to
+                    <h2 class="color-orange text-center margin-b-48" data-aos="fade">Erango provides audit history to
                     demonstrate when
                     people
                     gained those
@@ -184,9 +184,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="" data-aos="fade">
+                    <!-- <div class="" data-aos="fade">
                         <a class="button button--large button--orange2">Learn more <i class="far fa-chevron-right"></i></a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
