@@ -10,9 +10,13 @@
   <div class="container">
     <h1 class="font-size-48"><?php the_title(); ?></h1>
   </div>
-</sction>
+</section>
 <?php endif; ?>
+<section class="section section--white section--full-height">
+  <div class="container">
     <?php the_content(); ?>
+  </div>
+</section>
 <?php endwhile; ?>
 
 <?php else : ?>
