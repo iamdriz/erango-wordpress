@@ -876,7 +876,29 @@ body {
 
 
 .article-header {
+    background-color: var(--blue);
+    color: var(--white);
+    padding-top: 48px;
     padding-bottom: 128px;
+    text-align: center;
+}
+.article-header a {
+    color: var(--orange);
+}
+
+.article-header__meta {
+    list-style: none;
+    color: var(--orange);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+}
+.article-header__meta li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
 }
 
 .mmm {

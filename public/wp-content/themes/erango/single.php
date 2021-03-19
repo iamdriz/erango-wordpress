@@ -4,14 +4,17 @@
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-	<div <?php //post_class(); ?> id="post-<?php the_ID(); ?>">
+	<article <?php //post_class(); ?> id="post-<?php the_ID(); ?>">
 
-		<section class="section section--blue article-header text-center">
+		<header class="article-header">
 			<div class="container">
 				<h1 class="font-size-48 margin-b-24"><?php the_title(); ?></h1>
-				<p class="color-orange"><?php echo get_the_time(__('l, F jS, Y', 'kubrick')); ?> &bull; Written by <a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>"><b><?php the_author_meta('user_login'); ?></b></a></p>
+				<ul class="article-header__meta">
+					<li><i class="far fa-clock"></i> <?php echo get_the_time(__('l, F jS, Y', 'kubrick')); ?></li>
+					<li><i class="far fa-user"></i> <a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>"><b><?php the_author_meta('user_login'); ?></b></a></li>
+				</ul>
 			</div>
-		</section>
+		</header>
 
 		<section class="section section--off-white">
 			<div class="container">
@@ -57,13 +60,13 @@
 			</div>
 		</section>
 
-	<?php //comments_template(); ?>
+		<?php //comments_template(); ?>
 
 		<?php endwhile; else: ?>
 
 		<p><?php _e('Sorry, no posts matched your criteria.', 'kubrick'); ?></p>
 
-	</div>
+	</article>
 
 <?php endif; ?>
 
