@@ -12,7 +12,7 @@
                     <a href="#"><i class="fab fa-twitter"></i> @erango</a>
                 </li>
             </ul>
-            <a class="button button--large button--white" href="/contact">Get in touch</a>
+            <a class="button button--large button--white" href="<?php bloginfo('home'); ?>/contact/">Get in touch</a>
         </div>
     </div>
     <div class="footer">
@@ -47,16 +47,16 @@
                     <nav id="footer-menu" class="footer-nav">
                         <ul class="">
                             <li class="">
-                                <a class="" href="<?php bloginfo('home'); ?>">Cookies</a>
+                                <a class="" href="<?php bloginfo('home'); ?>/cookies/">Cookies</a>
                             </li>
                             <li class="">
-                                <a class="" href="<?php bloginfo('home'); ?>">Privacy Policy</a>
+                                <a class="" href="<?php bloginfo('home'); ?>/privacy-policy/">Privacy Policy</a>
                             </li>
                             <li class="">
-                                <a class="" href="<?php bloginfo('home'); ?>">GDPR</a>
+                                <a class="" href="<?php bloginfo('home'); ?>/gdpr/">GDPR</a>
                             </li>
                             <li class="">
-                                <a class="" href="<?php bloginfo('home'); ?>">Contact</a>
+                                <a class="" href="<?php bloginfo('home'); ?>/contact/">Contact</a>
                             </li>
                         </ul>
                         <?php wp_nav_menu( array( 
