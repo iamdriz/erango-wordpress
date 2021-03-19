@@ -4,7 +4,7 @@
 
 		<?php if (have_posts()) : ?>
 
-			<section class="section section--off-white">
+			<div class="sub-header">
 				<div class="container">
 					<?php $post = $posts[0]; // Hack. Set $post so that the_date() works. ?>
 					<?php /* If this is a category archive */ if (is_category()) { ?>
@@ -23,7 +23,7 @@
 						<h1 class="font-size-48"><?php _e('Blog Archives', 'kubrick'); ?></h1>
 					<?php } ?>
 				</div>
-			</section>
+			</div>
 
 			<section class="section section--white">
 				<div class="container">

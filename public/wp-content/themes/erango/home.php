@@ -1,11 +1,11 @@
 <?php get_header(); ?>
 
 <main role="main">
-<section class="sub-header section section--off-white">
+<div class="sub-header">
   <div class="container">
-    <h1 class="font-size-64">Blog</h1>
+    <h1 class="font-size-64"><?php single_post_title(); ?></h1>
   </div>
-</section>
+</div>
 <section class="section section--white">
   <div class="container">
   <?php $wp_query = new WP_Query(array('posts_per_page' => get_option('posts_per_page'), 'paged' => $paged)); ?>      
