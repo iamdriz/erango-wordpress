@@ -1,14 +1,19 @@
 <?php get_header(); ?>
 
 <main role="main">
-<section class="section background-primary">
-	<div class="container">
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-		<div <?php //post_class(); ?> id="post-<?php the_ID(); ?>">
-		
-			<h1 class="text-center margin-b-48"><?php the_title(); ?></h1>
+	<div <?php //post_class(); ?> id="post-<?php the_ID(); ?>">
+
+		<section class="section section--off-white">
+			<div class="container">
+				<h1 class="font-size-48"><?php the_title(); ?></h1>
+			</div>
+		</section>
+
+		<section class="section section--white">
+			<div class="container">
 
 			<div class="prose">
 				<?php the_content('<p class="serif">' . __('Read the rest of this entry &raquo;', 'kubrick') . '</p>'); ?>
@@ -47,23 +52,19 @@
 				</p>
 
 			</div>
-		</div>
+		</section>
 
 	<?php //comments_template(); ?>
 
-	<?php endwhile; else: ?>
+		<?php endwhile; else: ?>
 
 		<p><?php _e('Sorry, no posts matched your criteria.', 'kubrick'); ?></p>
 
+	</div>
+
 <?php endif; ?>
 
-	</div>
-
-
-	</div>
-	</section>
-
-<section class="section background-orange">
+<section class="section section--off-white">
 	<div class="container">
 		<div class="navigation">
 			<div class="alignleft"><?php previous_post_link( '%link', '&laquo; %title' ) ?></div>

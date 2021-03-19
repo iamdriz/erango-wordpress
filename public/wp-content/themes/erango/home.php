@@ -1,12 +1,14 @@
 <?php get_header(); ?>
 
 <main role="main">
-<section class="section section--orange">
+<section class="section section--off-white">
   <div class="container">
-  <?php $wp_query = new WP_Query(array('posts_per_page' => get_option('posts_per_page'), 'paged' => $paged)); ?>
-
-      <h1 class="font-size-64 text-center margin-b-48">Blog</h1>
-      
+    <h1 class="font-size-64">Blog</h1>
+  </div>
+</section>
+<section class="section section--white">
+  <div class="container">
+  <?php $wp_query = new WP_Query(array('posts_per_page' => get_option('posts_per_page'), 'paged' => $paged)); ?>      
       <div class="post-list">
       <?php while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
       <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">         
@@ -38,7 +40,7 @@
   </div>
 </section>
 
-<section class="section background-blue">
+<section class="section section--off-white">
     <div class="container">
       <div class="navigation">
         <div class="alignleft">
@@ -51,7 +53,7 @@
     </div>
 </section>
 
-<section class="section background-green">
+<section class="section section--white">
   <div class="container">
     <?php get_calendar(); ?>
       <h2 class="border-bottom">Categories</h2>
