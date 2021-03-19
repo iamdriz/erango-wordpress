@@ -139,6 +139,10 @@ h6 {
     margin-bottom: 16px;
 }
 
+.bold {
+    font-weight: bold;
+}
+
 main {
     min-height: 100vh;
 }
@@ -285,6 +289,12 @@ main {
 
 .color-orange {
     color: var(--orange);
+}
+.color-blue {
+    color: var(--blue);
+}
+.color-grey {
+    color: #666666;
 }
 
 .columns {

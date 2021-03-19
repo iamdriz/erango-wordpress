@@ -23,11 +23,12 @@
                             <img src="<?php bloginfo('template_directory'); ?>/icon.png" width="640" height="640">
                         </figure>
                     </div>
-                    <div class="col-7 offset-1">
-                        <h2 class="" data-aos="fade-left">Erango is a cloud-based software platform that allows you to
+                    <div class="col-7 offset-1" data-aos="fade-left">
+                        <h2 class="margin-b-16">ERANGO</h2>
+                        <p class="bold font-size-xxl color-grey">A cloud-based software platform that allows you to
                             organise and manage training, both
                             online
-                            and classroom-based and record the skills of your people.</h2>
+                            and classroom-based and record the skills of your people.</p>
                     </div>
                 </div>
             </div>
