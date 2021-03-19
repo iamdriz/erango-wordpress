@@ -55,7 +55,7 @@
     </div>
 </section>
 
-<section class="section section--white">
+<!--<section class="section section--white">
   <div class="container">
     <?php get_calendar(); ?>
       <h2 class="border-bottom">Categories</h2>
@@ -81,7 +81,7 @@
 
       </div>
   </div>
-</section>
-</main><!-- #main -->
+</section>-->
+</main>
 
 <?php get_footer(); ?>
