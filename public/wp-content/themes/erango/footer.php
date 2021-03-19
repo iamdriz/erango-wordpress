@@ -1,4 +1,4 @@
-<div class="section section--orange section--paper-plane text-center">
+<div class="section section--orange text-center">
         <div class="container">
             <h2 class="text-center margin-b-48">Contact us</h2>
             <ul class="contact-links">
@@ -73,6 +73,7 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
     <script>
         $(document).ready(function () {
             AOS.init({
@@ -136,7 +137,6 @@
             lastScrollTop = scrollTop;
         }
     </script>
-    <script src="<?php bloginfo('template_directory'); ?>/scrolljacking.js"></script>
     <?php wp_footer(); ?>
 </body>
 

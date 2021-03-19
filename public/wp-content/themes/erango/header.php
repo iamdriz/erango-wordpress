@@ -16,14 +16,14 @@
                 <img src="<?php bloginfo('template_directory'); ?>/logo.png">
             </a>
             <nav class="" data-aos="fade-down">
-                <ul>
+                <ul class="">
                     <li><a href="<?php bloginfo('home'); ?>/features/">Features</a></li>
-                    <li><a href="<?php bloginfo('home'); ?>/pricing/">Pricing</a></li>
                     <li><a href="<?php bloginfo('home'); ?>/blog/">Blog</a></li>
                     <li><a href="<?php bloginfo('home'); ?>/about">About</a></li>
                     <li><a href="<?php bloginfo('home'); ?>/contact/">Contact</a></li>
                 </ul>
                 <a href="<?php bloginfo('home'); ?>" class="button button--orange2">Request a Demo</a>
             </nav>
+            <div class="burger"></div>
         </div>
     </div>

@@ -1,6 +1,7 @@
 <?php get_header(); ?>
-<main role="main">
-        <div class="masthead">
+    <main role="main">
+
+        <section class="masthead">
             <div class="container">
                 <div class="columns is-align-center">
                     <div class="col-5">
@@ -12,9 +13,9 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="section section--off-white">
+        <section class="section section--off-white" id="">
             <div class="container">
                 <div class="columns is-align-center">
                     <div class="col-4">
@@ -30,8 +31,9 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="section section--white">
+        </section>
+        
+        <section class="section section--white" id="">
             <div class="container">
                 <div class="columns is-align-center">
                     <div class="col-5">
@@ -73,129 +75,20 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="section section--blue section--full-height text-center" id="features">
-            <div id="features-fixed" class="section--blue">
-                <div class="container">
-                    <h2 class="color-orange text-center margin-b-48" data-aos="fade">Erango provides audit history to
+        <section class="section section--blue" id="features">
+            <div class="container">
+                <h2 class="color-orange text-center margin-b-48" data-aos="fade">Erango provides audit history to
                     demonstrate when
                     people
                     gained those
                     skills and highlights when staff
                     skills are about to expire so they can be retrained.</h2>
-                    <div class="body">
-                        <div class="wrapper">
-                            <div class="item">
-                                <div class="card" data-aos="zoom-in">
-                                    <div class="card__icon">
-                                        <i class="fad fa-monitor-heart-rate fa-fw"></i>
-                                    </div>
-                                    <h3 class="font-size-xl margin-b-16">Monitor and measure staff compliance</h3>
-                                    <p>Assign skill profiles to jobs and then to people, Erango can then cross reference the two to
-                                        check for compliance and training gaps.</p>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="card" data-aos="zoom-in">
-                                    <div class="card__icon">
-                                        <i class="fad fa-chalkboard-teacher fa-fw"></i>
-                                    </div>
-                                    <h3 class="font-size-xl margin-b-16">Automatically enrol staff onto training courses</h3>
-                                    <p>Required for their role and deliver that training either through the inbuilt e-learning
-                                        platform,
-                                        classroom-based learning or a blend of the two.</p>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="card" data-aos="zoom-in">
-                                    <div class="card__icon">
-                                        <i class="fad fa-mobile-alt fa-fw"></i>
-                                    </div>
-                                    <h3 class="font-size-xl margin-b-16">Mobile compatible app available</h3>
-                                    <p>Allowing staff members to view their training and compliance on their mobile devices if
-                                        required.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="card" data-aos="zoom-in">
-                                    <div class="card__icon">
-                                        <i class="fad fa-users-class fa-fw"></i>
-                                    </div>
-                                    <h3 class="font-size-xl margin-b-16">Data captured using keypad technology</h3>
-                                    <p>With the use of our classroom kits, face-to- face training can be delivered, allowing you to train and assess knowledge in the group.</p>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="card" data-aos="zoom-in">
-                                    <div class="card__icon">
-                                        <i class="fad fa-box-check fa-fw"></i>
-                                    </div>
-                                    <h3 class="margin-b-16">Title</h3>
-                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus ad magni deserunt, quos, vel
-                                        rem
-                                        distinctio nemo.</p>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="card" data-aos="zoom-in">
-                                    <div class="card__icon">
-                                        <i class="fad fa-users fa-fw"></i>
-                                    </div>
-                                    <h3 class="margin-b-16">Title</h3>
-                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus ad magni deserunt, quos, vel
-                                        rem
-                                        distinctio nemo.</p>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="card" data-aos="zoom-in">
-                                    <div class="card__icon">
-                                        <i class="fad fa-database fa-fw"></i>
-                                    </div>
-                                    <h3 class="margin-b-16">Title</h3>
-                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus ad magni deserunt, quos, vel
-                                        rem
-                                        distinctio nemo.</p>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="card" data-aos="zoom-in">
-                                    <div class="card__icon">
-                                        <i class="fad fa-universal-access fa-fw"></i>
-                                    </div>
-                                    <h3 class="margin-b-16">Title</h3>
-                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus ad magni deserunt, quos, vel
-                                        rem
-                                        distinctio nemo.</p>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="card" data-aos="zoom-in">
-                                    <div class="card__icon">
-                                        <i class="fad fa-headset fa-fw"></i>
-                                    </div>
-                                    <h3 class="margin-b-16">Title</h3>
-                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus ad magni deserunt, quos, vel
-                                        rem
-                                        distinctio nemo.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- <div class="" data-aos="fade">
-                        <a class="button button--large button--orange2">Learn more <i class="far fa-chevron-right"></i></a>
-                    </div> -->
-                </div>
             </div>
-        </div>
-        <div class="targets-wrapper">
-            <div class="targets" data-item="1"></div><div class="targets" data-item="2"></div><div class="targets" data-item="3"></div><div class="targets" data-item="4"></div><div class="targets" data-item="5"></div><div class="targets" data-item="6"></div><div class="targets" data-item="7"></div><div class="targets" data-item="8"></div>
-            <div class="targets" data-item="9"></div>
-        </div>
+        </section>
 
-        <div class="section section--off-white" id="clients">
+        <section class="section section--off-white" id="clients">
             <div class="container">
                 <h2 class="text-center margin-b-48" data-aos="fade">Who we've worked with</h2>
                 <div class="clients" data-aos="fade">
@@ -225,6 +118,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+
     </main>
 <?php get_footer(); ?>
