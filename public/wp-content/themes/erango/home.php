@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <main role="main">
-<section class="section section--off-white">
+<section class="sub-header section section--off-white">
   <div class="container">
     <h1 class="font-size-64">Blog</h1>
   </div>
@@ -24,14 +24,16 @@
           </figure>
           <section class="post-content">
           
-            <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-            <p><?php echo get_the_date() ?></p>
+            <h2 class="post-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+            <p class="post-datetime"><?php echo get_the_date() ?></p>
             
             <?php /*<p class="who-when">by <a href="<?php echo get_author_posts_url(get_the_author_meta( 'ID' )); ?>"><?php the_author_meta('first_name'); ?> <?php the_author_meta('last_name'); ?></a> on <?php echo get_the_date() ?> </p>*/ ?>
 
             <?php //the_excerpt(); ?>
           
+            <!--
             <p class="postmetadata"><?php the_tags(__('Tags:', 'kubrick'), ', ', '<br />'); ?> <?php printf(__('Posted in %s', 'kubrick'), get_the_category_list(', ')); ?> | <?php edit_post_link(__('Edit', 'kubrick'), '', ' | '); ?>  <?php comments_popup_link(__('No Comments &#187;', 'kubrick'), __('1 Comment &#187;', 'kubrick'), __('% Comments &#187;', 'kubrick'), '', __('Comments Closed', 'kubrick') ); ?></p>
+            -->
 
           </section>
         </article>

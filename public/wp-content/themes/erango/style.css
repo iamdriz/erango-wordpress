@@ -746,11 +746,33 @@ body {
 
 .post-list {
     display: grid;
-    grid-template-columns: 66.6% 33.3%;
+    grid-template-columns: 33.3% 33.3% 33.3%;
     gap: 32px;
 }
-.post {
+.post-list .post {
+
+}
+.post-list .post-thumbnail {
+
+}
+.post-list .post-thumbnail img {
+    width: 100%;
+    max-height: 256px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.post-list .post-content {
     padding: 32px;
-    background-color: var(--white);
-    border-radius: 32px;
+}
+.post-list .post-title {
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 16px;
+}
+.post .post-datetime {
+    
+}
+
+.sub-header {
+
 }
