@@ -5,8 +5,10 @@
             <div class="container">
                 <div class="columns is-align-center">
                     <div class="col-5">
-                        <h1 class="color-orange" data-aos="fade-in">Managing Competencies in a Complex business world.
-                        </h1>
+                        <h1 class="color-orange margin-b-48" data-aos="fade-in">Managing Competencies in a Complex business world.</h1>
+                        <div class="down">
+                            <i class="far fa-arrow-down"></i>
+                        </div>
                     </div>
                     <div class="col-6 offset-1">
                         <img class="tp" data-aos="fade-in" src="<?php bloginfo('template_directory'); ?>/masthead3.png">

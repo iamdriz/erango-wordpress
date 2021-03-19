@@ -18,12 +18,17 @@
             <nav class="" data-aos="fade-down">
                 <ul class="">
                     <li><a href="<?php bloginfo('home'); ?>/features/">Features</a></li>
+                    <li><a href="<?php bloginfo('home'); ?>/about">About us</a></li>
                     <li><a href="<?php bloginfo('home'); ?>/blog/">Blog</a></li>
-                    <li><a href="<?php bloginfo('home'); ?>/about">About</a></li>
-                    <li><a href="<?php bloginfo('home'); ?>/contact/">Contact</a></li>
+                    <li><a href="<?php bloginfo('home'); ?>/contact/">Contact us</a></li>
                 </ul>
                 <a href="<?php bloginfo('home'); ?>" class="button button--orange2">Request a Demo</a>
             </nav>
-            <div class="burger"></div>
+            <div class="burger">
+                <a class="burger__link">
+                    <span class="burger__line"></span>
+                    <span class="burger__line"></span>
+                </a>
+            </div>
         </div>
     </div>

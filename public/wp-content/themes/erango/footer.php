@@ -136,6 +136,12 @@
             
             lastScrollTop = scrollTop;
         }
+
+        $(document).on('click', '.burger__link', (e) => {
+            e.preventDefault();
+            let burger = $('.burger__link');
+            burger.toggleClass('burger__link--active');
+        });
     </script>
     <?php wp_footer(); ?>
 </body>

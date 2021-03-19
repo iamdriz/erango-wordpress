@@ -6,16 +6,17 @@
 
 	<div <?php //post_class(); ?> id="post-<?php the_ID(); ?>">
 
-		<section class="section section--off-white">
+		<section class="section section--blue article-header text-center">
 			<div class="container">
-				<h1 class="font-size-48"><?php the_title(); ?></h1>
+				<h1 class="font-size-48 margin-b-24"><?php the_title(); ?></h1>
+				<p class="color-orange"><?php echo get_the_time(__('l, F jS, Y', 'kubrick')); ?> &bull; Written by <a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>"><b><?php the_author_meta('user_login'); ?></b></a></p>
 			</div>
 		</section>
 
-		<section class="section section--white">
+		<section class="section section--off-white">
 			<div class="container">
 
-			<div class="prose">
+			<div class="prose mmm">
 				<?php the_content('<p class="serif">' . __('Read the rest of this entry &raquo;', 'kubrick') . '</p>'); ?>
 
 				<?php wp_link_pages(array('before' => '<p><strong>' . __('Pages:', 'kubrick') . '</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
