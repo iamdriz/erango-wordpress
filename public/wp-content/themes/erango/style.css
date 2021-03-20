@@ -74,11 +74,13 @@ h1 {
 h2 {
     font-size: 40px;
     line-height: 48px;
+    margin-bottom: 16px;
 }
 
 h3 {
     font-size: 32px;
     line-height: 40px;
+    margin-bottom: 16px;
 }
 
 h4 {
@@ -141,10 +143,6 @@ h6 {
 
 .bold {
     font-weight: bold;
-}
-
-main {
-    min-height: 100vh;
 }
 
 .container {
@@ -955,6 +953,19 @@ body {
     color: var(--blue);
 }
 
+.sub-header--white {
+    background-color: var(--white);
+    color: var(--blue);
+}
+.sub-header--orange {
+    background-color: var(--orange);
+    color: var(--blue);
+}
+.sub-header--blue {
+    background-color: var(--blue);
+    color: var(--orange);
+}
+
 
 
 
@@ -993,4 +1004,85 @@ body {
 }
 .features .feature .feature-description {
     color: #666;
+}
+
+
+
+.staff-list {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 48px -24px;
+}
+.staff-list .staff-item {
+    width: calc(50% - 48px);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 24px 48px;
+}
+
+.staff-item .staff-photo {
+    width: 160px;
+    height: 160px;
+    background-color: var(--orange);
+    flex-shrink: 0;
+    margin-right: 32px;
+    border-radius: 80px;
+}
+
+
+input[type=text],
+input[type=email],
+input[type=tel],
+textarea {
+    width: 100%;
+    background-color: var(--off-white);
+    height: 48px;
+    padding: 0 16px;
+    font-size: inherit;
+    font-family: inherit;
+    line-height: inherit;
+    border-radius: 8px;
+}
+
+textarea {
+    height: auto;
+    min-height: 256px;
+    padding: 16px;
+    resize: vertical;
+}
+
+label {
+    font-weight: 600;
+    display: flex;
+    margin-bottom: 8px;
+}
+
+.form {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 -16px;
+}
+.form > div {
+    width: 50%;
+    padding: 0 16px;
+    margin-bottom: 16px;
+}
+
+.form .form__group--full-width,
+.form .form__actions {
+    width: 100%;
+}
+
+/* rename these to cards so we can have a utility set of cards */
+.panel {
+    padding: 32px;
+    border-radius: 32px;
+    background-color: var(--white);
+}
+.panel--orange {
+    background-color: var(--orange);
+}
+.panel--blue {
+    background-color: var(--blue);
 }
