@@ -58,6 +58,21 @@
 
 				</div>
 			</div>
+			<h2 class="text-center">Share this article</h2>
+			<ul class="social">
+				<li class="">
+					<a href="https://twitter.com" target="_blank" aria-label="Twitter"><i
+							class="fab fa-twitter"></i></a>
+				</li>
+				<li class="">
+					<a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i
+							class="fab fa-facebook"></i></a>
+				</li>
+				<li class="">
+					<a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn"><i
+							class="fab fa-linkedin"></i></a>
+				</li>
+			</ul>
 		</section>
 
 		<?php //comments_template(); ?>

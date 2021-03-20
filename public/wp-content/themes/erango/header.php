@@ -22,7 +22,7 @@
                     <li><a href="<?php bloginfo('home'); ?>/blog/">Blog</a></li>
                     <li><a href="<?php bloginfo('home'); ?>/contact/">Contact us</a></li>
                 </ul>
-                <a href="<?php bloginfo('home'); ?>" class="button button--orange2">Demo</a>
+                <a href="<?php bloginfo('home'); ?>/demo/" class="button button--orange2">Demo</a>
             </nav>
             <div class="burger">
                 <a class="burger__link">

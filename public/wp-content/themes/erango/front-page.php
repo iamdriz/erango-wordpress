@@ -91,39 +91,39 @@
                 <div class="cards">
                     <div class="card">
                         <i class="fad fa-monitor-heart-rate card__icon"></i>
-                        <h3>Feature 1</h3>
+                        <h3 class="card-title">Feature 1</h3>
                     </div>
                     <div class="card">
                         <i class="fad fa-chalkboard-teacher card__icon"></i>
-                        <h3>Feature 2</h3>
+                        <h3 class="card-title">Feature 2</h3>
                     </div>
                     <div class="card">
                         <i class="fad fa-database card__icon"></i>
-                        <h3>Feature 3</h3>
+                        <h3 class="card-title">Feature 3</h3>
                     </div>
                     <div class="card">
                         <i class="fad fa-mobile-alt card__icon"></i>
-                        <h3>Feature 4</h3>
+                        <h3 class="card-title">Feature 4</h3>
                     </div>
                     <div class="card">
                         <i class="fad fa-users-class card__icon"></i>
-                        <h3>Feature 5</h3>
+                        <h3 class="card-title">Feature 5</h3>
                     </div>
                     <div class="card">
                         <i class="fad fa-box-check card__icon"></i>
-                        <h3>Feature 6</h3>
+                        <h3 class="card-title">Feature 6</h3>
                     </div>
                     <div class="card">
                         <i class="fad fa-users card__icon"></i>
-                        <h3>Feature 7</h3>
+                        <h3 class="card-title">Feature 7</h3>
                     </div>
                     <div class="card">
                         <i class="fad fa-headset card__icon"></i>
-                        <h3>Feature 8</h3>
+                        <h3 class="card-title">Feature 8</h3>
                     </div>
                 </div>
                 <div class="text-center">
-                    <a class="button button--large button--orange2" href="<?php echo bloginfo('home'); ?>/features/">Learn more <i class="far fa-chevron-right"></i></a>
+                    <a class="button button--large button--orange2" href="<?php echo bloginfo('home'); ?>/features/">Learn more</a>
                 </div>
             </div>
         </section>

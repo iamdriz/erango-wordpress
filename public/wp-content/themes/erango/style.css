@@ -67,8 +67,8 @@ h6 {
 }
 
 h1 {
-    font-size: 56px;
-    line-height: 64px;
+    font-size: 48px;
+    line-height: 56px;
 }
 
 h2 {
@@ -529,7 +529,7 @@ main {
 
 .card {
     padding: 32px;
-    background-color: rgba(255, 255, 255, .95);
+    background-color: var(--white);
     border-radius: 32px;
     color: var(--blue);
     text-align: center;
@@ -561,10 +561,22 @@ main {
 } */
 
 .card__icon {
+    width: 128px;
+    height: 128px;
+    background-color: var(--off-white);
+    border-radius: 64px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     font-size: 64px;
     line-height: 72px;
     margin-bottom: 24px;
     color: var(--orange);
+}
+
+.card-title {
+    font-size: 24px;
+    line-height: 32px;
 }
 
 
@@ -879,7 +891,7 @@ body {
     background-color: var(--blue);
     color: var(--white);
     padding-top: 48px;
-    padding-bottom: 128px;
+    padding-bottom: 112px;
     text-align: center;
 }
 .article-header a {
@@ -908,6 +920,7 @@ body {
     margin-top: -128px;
     margin-left: -64px;
     margin-right: -64px;
+    margin-bottom: 48px;
 }
 @media (min-width: 1200px) {
     .mmm__inner {
@@ -940,4 +953,44 @@ body {
     padding-bottom: 48px;
     background-color: var(--off-white);
     color: var(--blue);
+}
+
+
+
+
+
+.features {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 48px -24px;
+}
+.features .feature {
+    width: calc(50% - 48px);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0 24px 48px;
+}
+.features .feature .feature__icon {
+    width: 160px;
+    height: 160px;
+    background-color: var(--off-white);
+    /* border: var(--orange) 4px solid; */
+    border-radius: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 80px;
+    line-height: 88px;
+    color: var(--orange);
+    flex-shrink: 0;
+    margin-right: 32px;
+}
+.features .feature .feature-title {
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 16px;
+}
+.features .feature .feature-description {
+    color: #666;
 }
