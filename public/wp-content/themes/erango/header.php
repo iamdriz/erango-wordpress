@@ -16,12 +16,17 @@
                 <img src="<?php bloginfo('template_directory'); ?>/logo.png">
             </a>
             <nav class="" data-aos="fade-down">
-                <ul class="">
+                <!--<ul class="">
                     <li><a href="<?php bloginfo('home'); ?>/features/">Features</a></li>
                     <li><a href="<?php bloginfo('home'); ?>/about">About us</a></li>
                     <li><a href="<?php bloginfo('home'); ?>/blog/">Blog</a></li>
                     <li><a href="<?php bloginfo('home'); ?>/contact/">Contact us</a></li>
-                </ul>
+                </ul>-->
+                <?php wp_nav_menu( array( 
+                    'theme_location' => 'header-menu', 
+                    'container' => '',
+                    'container_class' => '',
+                    'fallback_cb' => false ) ); ?>
                 <a href="<?php bloginfo('home'); ?>/demo/" class="button button--orange2">Demo</a>
             </nav>
             <div class="burger">

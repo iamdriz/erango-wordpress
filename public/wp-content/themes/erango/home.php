@@ -53,18 +53,19 @@
 
 <section class="section section--off-white">
     <div class="container">
-      <div class="navigation">
+      <!--<div class="navigation">
         <div class="alignleft">
           <?php next_posts_link('<i class="fas fa-chevron-left fa-fw"></i> Older') ?>
         </div>
         <div class="alignright">
           <?php previous_posts_link('Newer <i class="fas fa-chevron-right fa-fw"></i>') ?>
         </div>
-      </div>
+      </div>-->
+      <?php erango_numeric_posts_nav(); ?>
     </div>
 </section>
 
-<section class="section section--white">
+<!--<section class="section section--white">
   <div class="container">
       <h3>Calender</h3>
       <?php get_calendar(); ?>
@@ -99,9 +100,16 @@
 
         <?php wp_meta(); ?>
 
+        <h3>Feeds</h3>
+        <ul class="feeds">
+    <li><a href="<?php bloginfo('rss2_url'); ?>" title="<?php _e('Syndicate this site using RSS'); ?>"><?php _e('<abbr title="Really Simple Syndication">RSS</abbr>'); ?></a></li>
+    <li><a href="<?php bloginfo('atom_url'); ?>" title="<?php _e('Syndicate this site using Atom'); ?>"><?php _e('Atom'); ?></a></li>
+    <li><a href="<?php bloginfo('comments_rss2_url'); ?>" title="<?php _e('The latest comments to all posts in RSS'); ?>"><?php _e('Comments <abbr title="Really Simple Syndication">RSS</abbr>'); ?></a></li>
+</ul>
+
       </div>
   </div>
-</section>
+</section>-->
 </main>
 
 <?php get_footer(); ?>

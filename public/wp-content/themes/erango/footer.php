@@ -28,7 +28,7 @@
             </div>
             <div class="footer-column footer-column__right">
                 <nav id="footer-menu" class="footer-nav">
-                    <ul class="">
+                    <!--<ul class="">
                         <li class="">
                             <a class="" href="<?php bloginfo('home'); ?>/cookies/">Cookies</a>
                         </li>
@@ -41,10 +41,10 @@
                         <li class="">
                             <a class="" href="<?php bloginfo('home'); ?>/contact/">Contact</a>
                         </li>
-                    </ul>
+                    </ul>-->
                     <?php wp_nav_menu( array( 
                     'theme_location' => 'footer-menu', 
-                    'container' => 'nav',
+                    'container' => '',
                     'container_class' => '',
                     'fallback_cb' => false ) ); ?>
                 </nav>
