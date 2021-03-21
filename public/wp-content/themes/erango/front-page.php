@@ -161,4 +161,21 @@
         </section>
 
     </main>
+<div class="section section--orange text-center">
+    <div class="container">
+        <h2 class="text-center margin-b-48">Contact us</h2>
+        <ul class="contact-links">
+            <li class="">
+                <a href="#"><i class="far fa-envelope"></i> hello@erango.co.uk</a>
+            </li>
+            <li class="">
+                <a href="#"><i class="far fa-phone"></i> 0800 000 000</a>
+            </li>
+            <li class="">
+                <a href="#"><i class="fab fa-twitter"></i> @erango</a>
+            </li>
+        </ul>
+        <a class="button button--large button--white" href="<?php bloginfo('home'); ?>/contact/">Get in touch</a>
+    </div>
+</div>
 <?php get_footer(); ?>

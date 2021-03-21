@@ -11,6 +11,7 @@
   <?php $wp_query = new WP_Query(array('posts_per_page' => get_option('posts_per_page'), 'paged' => $paged)); ?>      
       <div class="post-list">
       <?php while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
+      <?php $count = $wp_query->current_post+1; ?>
       <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">         
           <figure class="post-thumbnail">
           <?php if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
@@ -34,6 +35,13 @@
             <!--
             <p class="postmetadata"><?php the_tags(__('Tags:', 'kubrick'), ', ', '<br />'); ?> <?php printf(__('Posted in %s', 'kubrick'), get_the_category_list(', ')); ?> | <?php edit_post_link(__('Edit', 'kubrick'), '', ' | '); ?>  <?php comments_popup_link(__('No Comments &#187;', 'kubrick'), __('1 Comment &#187;', 'kubrick'), __('% Comments &#187;', 'kubrick'), '', __('Comments Closed', 'kubrick') ); ?></p>
             -->
+
+            <?php if($count == 1) : ?>
+              <?php the_excerpt(); ?>
+              <div class="">
+                <a class="button button--orange2" href="<?php the_permalink() ?>">Read article</a>
+              </div>
+            <?php endif; ?>
 
           </section>
         </article>

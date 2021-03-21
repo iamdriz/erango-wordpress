@@ -718,7 +718,7 @@ h6 {
     position: relative;
 }
 
-.slick-list:before {
+.clients .slick-list:before {
     content: '';
     position: absolute;
     top: 0;
@@ -729,7 +729,7 @@ h6 {
     background: linear-gradient(to right, #eee, transparent);
 }
 
-.slick-list:after {
+.clients .slick-list:after {
     content: '';
     position: absolute;
     top: 0;
@@ -741,7 +741,7 @@ h6 {
 }
 
 .slick-dotted {
-    padding-bottom: calc(48px - 8px);
+    padding-bottom: calc(32px + 16px);
 }
 
 .slick-dots {
@@ -758,8 +758,8 @@ h6 {
 
 .slick-dots li {
     text-indent: -999em;
-    width: 8px;
-    height: 8px;
+    width: 16px;
+    height: 16px;
     border: var(--blue) 2px solid;
     border-radius: 999em;
 }
@@ -874,7 +874,7 @@ body {
     margin-right: auto;
     border-radius: 16px;
     text-align: center;
-    margin-top: -64px;
+    margin-top: -25%;
     position: relative;
     z-index: 1;
     padding: 64px 32px;
@@ -973,7 +973,7 @@ body {
 .features {
     display: flex;
     flex-flow: row wrap;
-    margin: 48px -24px;
+    margin: 0 -24px -48px;
 }
 .features .feature {
     width: calc(50% - 48px);
@@ -1085,4 +1085,13 @@ label {
 }
 .panel--blue {
     background-color: var(--blue);
+}
+
+.image-list {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
 }

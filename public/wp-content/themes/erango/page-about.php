@@ -6,6 +6,5 @@
 <?php endwhile; ?>
 <?php else : ?>
 <?php endif; ?>
-  <?php get_template_part('template-parts/contact'); ?>
 </main>
 <?php get_footer(); ?>

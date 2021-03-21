@@ -7,7 +7,6 @@
     <p>Template needed.</p>
   </div>
 </div>
-  <?php get_template_part('template-parts/contact'); ?>
 </main>
 
 <?php get_footer(); ?>
