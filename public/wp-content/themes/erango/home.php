@@ -3,7 +3,7 @@
 <main role="main">
 <div class="sub-header">
   <div class="container">
-    <h1 class="font-size-64"><?php single_post_title(); ?></h1>
+    <h1><?php single_post_title(); ?></h1>
   </div>
 </div>
 <section class="section section--white">
@@ -15,13 +15,14 @@
       <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">         
           <figure class="post-thumbnail">
           <?php if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
-            echo '<a href="'.get_permalink().'">';
-            the_post_thumbnail(array(150,150));
-            echo '</a>';
+            //echo '<a href="'.get_permalink().'">';
+            //the_post_thumbnail(array(150,150));
+            //echo '</a>';
             //echo '<a href="'.get_permalink().'"><img src="'. get_bloginfo('template_directory') .'/img/thumbnail-placeholder.png" alt="Blog thumbnail" /></a>';
           } else {
             //echo '<a href="'.get_permalink().'"><img src="'. get_bloginfo('template_directory') .'/img/thumbnail-placeholder.png" alt="Blog thumbnail" /></a>';
           }?>
+            <a href="<?php echo get_permalink(); ?>"><img src="https://picsum.photos/1920/1080?random=<?php the_ID(); ?>" width="1920" height="1080"></a>
           </figure>
           <section class="post-content">
           
@@ -63,17 +64,22 @@
     </div>
 </section>
 
-<!--<section class="section section--white">
+<section class="section section--white">
   <div class="container">
-    <?php get_calendar(); ?>
-      <h2 class="border-bottom">Categories</h2>
+      <h3>Calender</h3>
+      <?php get_calendar(); ?>
+
+      <h3>Categories</h3>
       <?php wp_list_categories('title_li=0'); ?>
       
-      <h2 class="border-bottom">Tags</h2>
+      <h3>Tags</h3>
       <?php wp_tag_cloud(); ?>
       
-      <h2 class="border-bottom">Archives</h2>
+      <h3>Archives</h3>
       <?php wp_get_archives('type=monthly'); ?>
+
+      <h3>Authors</h3>
+      <?php wp_list_authors('exclude_admin=0&optioncount=1&show_fullname=1&hide_empty=1'); ?> 
     
       <div class="sub-menu">
         <?php
@@ -87,9 +93,15 @@
         </ul>
         <?php } ?>
 
+        <?php get_search_form(); ?>
+
+        <?php wp_list_bookmarks(); ?>
+
+        <?php wp_meta(); ?>
+
       </div>
   </div>
-</section>-->
+</section>
 </main>
 
 <?php get_footer(); ?>
