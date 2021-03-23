@@ -27,7 +27,7 @@
           <section class="post-content">
           
             <h2 class="post-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-            <p class="post-datetime"><?php echo get_the_date() ?></p>
+            <p class="post-datetime"><i class="far fa-clock"></i> <?php echo get_the_date() ?></p>
             
             <?php /*<p class="who-when">by <a href="<?php echo get_author_posts_url(get_the_author_meta( 'ID' )); ?>"><?php the_author_meta('first_name'); ?> <?php the_author_meta('last_name'); ?></a> on <?php echo get_the_date() ?> </p>*/ ?>
 
@@ -65,7 +65,7 @@
     </div>
 </section>
 
-<!--<section class="section section--white">
+<section class="section section--white">
   <div class="container">
       <h3>Calender</h3>
       <?php get_calendar(); ?>
@@ -109,7 +109,7 @@
 
       </div>
   </div>
-</section>-->
+</section>
 </main>
 
 <?php get_footer(); ?>

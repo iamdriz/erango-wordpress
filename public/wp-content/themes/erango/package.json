@@ -1,0 +1,11 @@
+{
+  "name": "erango",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Erango WordPress Theme",
+  "scripts": {
+    "build:style": "sass assets/sass/style.scss:style.css --style=expanded --source-map",
+		"build:style-editor": "sass assets/sass/style-editor.scss:assets/css/style-editor.css --style=expanded --source-map"
+  },
+  "author": "Cameron Drysdale"
+}

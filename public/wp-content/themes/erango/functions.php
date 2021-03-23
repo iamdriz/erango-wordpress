@@ -95,3 +95,29 @@ function erango_numeric_posts_nav() {
 
 // enable links manager
 add_filter( 'pre_option_link_manager_enabled', '__return_true' );
+
+// enable all post formats
+add_theme_support( 'post-formats', 
+	array( 
+		'aside', 
+		'gallery',
+		'link',
+		'image',
+		'quote',
+		'status',
+		'video',
+		'audio',
+		'chat'
+	) 
+);
+add_post_type_support( 'post', 'post-formats' );
+add_post_type_support( 'page', 'post-formats' );
+
+
+function erango_change_search_url() {
+    if ( is_search() && ! empty( $_GET['s'] ) ) {
+        wp_redirect( home_url( "/search/" ) . urlencode( get_query_var( 's' ) ) );
+        exit();
+    }   
+}
+add_action('template_redirect', 'erango_change_search_url');
