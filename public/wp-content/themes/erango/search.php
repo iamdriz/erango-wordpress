@@ -1,6 +1,5 @@
 <?php get_header(); ?>
 
-<main role="main">
 <div class="sub-header">
   <div class="container">
     <h1>Search</h1>
@@ -20,5 +19,4 @@
     <?php endif; ?>
     </div>
   </section>
-</main>
 <?php get_footer(); ?>

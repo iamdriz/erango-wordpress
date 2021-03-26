@@ -1,7 +1,5 @@
 <?php get_header(); ?>
 
-<main role="main">
-
 		<?php if (have_posts()) : ?>
 
 			<div class="sub-header">
@@ -74,7 +72,5 @@
 			?>
 
 <?php get_sidebar(); ?>
-
-</main><!-- #main -->
 
 <?php get_footer(); ?>

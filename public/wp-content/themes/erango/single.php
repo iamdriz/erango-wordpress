@@ -1,7 +1,5 @@
 <?php get_header(); ?>
 
-<main role="main">
-
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 	<article <?php //post_class(); ?> id="post-<?php the_ID(); ?>">
@@ -93,7 +91,4 @@
 		</div>
 	</div>
 </section>
-
-</main><!-- #main -->
-
 <?php get_footer(); ?>

@@ -10,18 +10,12 @@
 </head>
 
 <body <?php body_class(); ?>>
-    <div class="header">
+    <header class="header">
         <div class="container">
             <a class="logo" href="<?php bloginfo('home'); ?>" data-aos="fade-down">
                 <img src="<?php bloginfo('template_directory'); ?>/logo.png">
             </a>
             <nav class="" data-aos="fade-down">
-                <!--<ul class="">
-                    <li><a href="<?php bloginfo('home'); ?>/features/">Features</a></li>
-                    <li><a href="<?php bloginfo('home'); ?>/about">About us</a></li>
-                    <li><a href="<?php bloginfo('home'); ?>/blog/">Blog</a></li>
-                    <li><a href="<?php bloginfo('home'); ?>/contact/">Contact us</a></li>
-                </ul>-->
                 <?php wp_nav_menu( array( 
                     'theme_location' => 'header-menu', 
                     'container' => '',
@@ -36,4 +30,6 @@
                 </a>
             </div>
         </div>
-    </div>
+    </header>
+
+    <main class="" id="maincontent" role="main">

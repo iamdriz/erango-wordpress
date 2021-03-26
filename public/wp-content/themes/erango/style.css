@@ -38,6 +38,7 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--white);
     color: var(--blue);
+    overflow-x: hidden;
 }
 
 img {
@@ -823,7 +824,7 @@ body {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    margin: 0 -16px -32px;
+    margin: 0 -16px 0 -32px;
 }
 .post-list .post {
     width: calc(33.3% - 32px);
@@ -884,7 +885,13 @@ body {
     z-index: 1;
     padding: 64px 32px;
 }
+.post-list .post:nth-child(1) .post-thumbnail {
+    margin: 0;
+}
 
+.post-list .post:nth-child(1) .post-thumbnail img {
+    border-radius: 0 0 16px 16px;
+}
 
 
 
@@ -952,8 +959,8 @@ body {
 }
 
 .sub-header {
-    padding-top: 48px;
-    padding-bottom: 48px;
+    padding-top: 32px;
+    padding-bottom: 32px;
     background-color: var(--off-white);
     color: var(--blue);
 }
@@ -1016,7 +1023,7 @@ body {
 .staff-list {
     display: flex;
     flex-flow: row wrap;
-    margin: 48px -24px;
+    margin: 0 -24px -48px;
 }
 .staff-list .staff-item {
     width: calc(50% - 48px);
@@ -1131,4 +1138,23 @@ label {
 
 .pagination li.active a {
     
+}
+
+.section--break-out {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+
+    margin-top: -64px;
+    margin-bottom: 64px;
+    padding-bottom: 40%;
+}
+
+.section--panel {
+    position: relative;
+    border-radius: 32px;
+    margin: calc(-40% - 64px) -64px 64px;
 }

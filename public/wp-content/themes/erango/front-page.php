@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<main role="main">
+
     <section class="masthead">
         <div class="container">
             <div class="columns is-align-center">
@@ -160,7 +160,7 @@
             </div>
         </section>
 
-    </main>
+
 <div class="section section--orange text-center">
     <div class="container">
         <h2 class="text-center margin-b-48">Contact us</h2>

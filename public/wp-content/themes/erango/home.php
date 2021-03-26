@@ -1,12 +1,11 @@
 <?php get_header(); ?>
 
-<main role="main">
 <div class="sub-header">
   <div class="container">
     <h1><?php single_post_title(); ?></h1>
   </div>
 </div>
-<section class="section section--white">
+<section class="section section--white" style="padding-top:0;">
   <div class="container">
   <?php $wp_query = new WP_Query(array('posts_per_page' => get_option('posts_per_page'), 'paged' => $paged)); ?>      
       <div class="post-list">
@@ -40,7 +39,7 @@
             <?php if($count == 1) : ?>
               <?php the_excerpt(); ?>
               <div class="">
-                <a class="button button--orange2" href="<?php the_permalink() ?>">Read article</a>
+                <a class="button button--orange2" href="<?php the_permalink() ?>">Read more</a>
               </div>
             <?php endif; ?>
 
@@ -65,7 +64,7 @@
     </div>
 </section>
 
-<section class="section section--white">
+<!--<section class="section section--white">
   <div class="container">
       <h3>Calender</h3>
       <?php get_calendar(); ?>
@@ -109,7 +108,6 @@
 
       </div>
   </div>
-</section>
-</main>
+</section>-->
 
 <?php get_footer(); ?>
