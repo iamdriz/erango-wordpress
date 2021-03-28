@@ -24,8 +24,8 @@ One of the above with no spacing and only offset
 .col-11,
 .col-12 {
     width: calc(12/12 * 100%);
-
-    /* border: #ff0000 1px solid; */
+    
+   /* border: #ff0000 1px solid; */
 }
 
 @media screen and (min-width: 900px) {
@@ -96,21 +96,6 @@ One of the above with no spacing and only offset
 
 .col-12 {
     width: calc(12/12 * 100%)
-}
-
-.col-1,
-.col-2,
-.col-3,
-.col-4,
-.col-5,
-.col-6,
-.col-7,
-.col-8,
-.col-9,
-.col-10,
-.col-11,
-.col-12 {
-    /* float: left */
 }
 
 .offset-1,

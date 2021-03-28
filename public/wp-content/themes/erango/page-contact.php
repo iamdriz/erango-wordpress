@@ -14,7 +14,7 @@
 <section class="section section--white">
   <div class="container">
     <?php the_content(); ?>
-    <div style="position:relative;background:var(--orange);border-radius:32px;padding: 64px 0;margin:0 -64px 48px;">
+    <div class="section section--orange section--panel">
       <div class="container">
         <form class="form">
           <div class="form__group">

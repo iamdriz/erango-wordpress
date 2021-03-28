@@ -48,7 +48,7 @@
                         </figure>
                     </div>
                 </div>
-                <div style="position:relative;background:#eee;border-radius:64px;padding: 64px 0;margin:64px -64px 0;">
+                <div class="section section--off-white section--panel">
                     <div class="container">
                         <div class="columns is-align-center">
                             <div class="col-6">
