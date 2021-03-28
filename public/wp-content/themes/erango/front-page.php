@@ -3,16 +3,8 @@
     <section class="masthead">
         <div class="container">
             <div class="columns is-align-center">
-                <div class="col-5">
+                <div class="col-8 offset-2 text-center">
                     <h1 class="color-orange margin-b-48" data-aos="fade-right">A simple management of competencies in a complex business world.</h1>
-                    <div class="" data-aos="fade-right">
-                        <a class="down" href="#section2">
-                            <i class="far fa-arrow-down"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-6 offset-1">
-                    <img class="tp" data-aos="fade-left" src="<?php bloginfo('template_directory'); ?>/masthead3.png">
                 </div>
             </div>
         </div>

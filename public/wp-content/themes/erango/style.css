@@ -160,7 +160,7 @@ h6 {
 
 .header {
     background-color: var(--blue);
-    height: 128px;
+    height: 96px;
     display: flex;
     align-items: center;
 }
@@ -308,13 +308,33 @@ h6 {
 
 
 .masthead {
-    background-color: var(--blue);
-    color: var(--white);
-    min-height: calc(100vh - 128px);
-    padding-top: 64px;
-    padding-bottom: 64px;
     display: flex;
     align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--blue);
+    color: var(--white);
+    min-height: calc(100vh - 96px);
+}
+.masthead:after {
+    content: '';
+    width: 100%;
+    min-height: 75vh;
+    background-image: url('masthead.svg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: auto;
+}
+.masthead .container {
+    padding-top: 64px;
+    margin-bottom: -25vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1 1 auto;
+}
+.masthead h1 {
+    margin-bottom: 0;
 }
 
 .section {
@@ -785,7 +805,7 @@ h6 {
 }
 .header--fixed {
     position: fixed;
-    height: 80px;
+    height: 96px;
 }
 .header--hidden {
     transform: translateY(-100%);
@@ -798,7 +818,7 @@ h6 {
 }
 
 body {
-    padding-top: 128px;
+    padding-top: 96px;
     background-color: var(--blue);
     color: var(--white);
 }
@@ -808,16 +828,8 @@ body {
     overflow: hidden;
 }
 
-.tp {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    max-width: 50%;
-    max-height: 100%;
-}
-
 .admin-bar .masthead {
-    min-height: calc(100vh - (128px + 32px));
+    min-height: calc(100vh - (96px + 32px));
 }
 
 .post-list {
@@ -849,7 +861,6 @@ body {
 }
 .post-list .post-thumbnail img {
     border-radius: 16px 16px 0 0;
-    aspect-ratio: 16 / 9;
     width: 100%;
     object-fit: cover;
     transition: all .2s ease-in-out;
@@ -880,10 +891,10 @@ body {
     margin-right: auto;
     border-radius: 16px;
     text-align: center;
-    margin-top: -25%;
+    margin-top: -16.6%;
     position: relative;
     z-index: 1;
-    padding: 64px 32px;
+    padding: 48px 32px;
 }
 .post-list .post:nth-child(1) .post-thumbnail {
     margin: 0;
@@ -891,6 +902,7 @@ body {
 
 .post-list .post:nth-child(1) .post-thumbnail img {
     border-radius: 0 0 16px 16px;
+    max-height: 480px;
 }
 
 
@@ -959,8 +971,8 @@ body {
 }
 
 .sub-header {
-    padding-top: 32px;
-    padding-bottom: 32px;
+    padding-top: 24px;
+    padding-bottom: 24px;
     background-color: var(--off-white);
     color: var(--blue);
 }
@@ -1158,3 +1170,5 @@ label {
     border-radius: 32px;
     margin: calc(-40% - 64px) -64px 64px;
 }
+
+
