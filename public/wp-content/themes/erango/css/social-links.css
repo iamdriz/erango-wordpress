@@ -1,0 +1,33 @@
+.social {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 32px;
+}
+
+.social li {
+    font-size: 24px;
+    margin-left: 16px;
+}
+
+.social li:first-child {
+    margin-left: 0;
+}
+
+.social li a {
+    width: 48px;
+    height: 48px;
+    background-color: var(--orange);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .2s ease-in-out;
+}
+
+.social li a:hover {
+    background-color: var(--white);
+    color: var(--blue);
+}

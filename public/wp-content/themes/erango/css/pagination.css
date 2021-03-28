@@ -1,0 +1,23 @@
+.pagination {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+}
+
+.pagination li {
+
+}
+
+.pagination li a {
+
+}
+
+.pagination li.active {
+
+}
+
+.pagination li.active a {
+    
+}

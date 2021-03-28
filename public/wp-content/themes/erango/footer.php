@@ -30,20 +30,6 @@
             </div>
             <div class="footer-column footer-column__right">
                 <nav id="footer-menu" class="footer-nav">
-                    <!--<ul class="">
-                        <li class="">
-                            <a class="" href="<?php bloginfo('home'); ?>/cookies/">Cookies</a>
-                        </li>
-                        <li class="">
-                            <a class="" href="<?php bloginfo('home'); ?>/privacy-policy/">Privacy Policy</a>
-                        </li>
-                        <li class="">
-                            <a class="" href="<?php bloginfo('home'); ?>/gdpr/">GDPR</a>
-                        </li>
-                        <li class="">
-                            <a class="" href="<?php bloginfo('home'); ?>/contact/">Contact</a>
-                        </li>
-                    </ul>-->
                     <?php wp_nav_menu( array( 
                     'theme_location' => 'footer-menu', 
                     'container' => '',

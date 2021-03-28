@@ -10,6 +10,25 @@ One of the above with no spacing and only offset
 
 */
 
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 32px;
+    padding-right: 32px;
+
+    /* border: #00ff00 1px solid; */
+}
+
+.columns {
+    display: flex;
+    gap: 32px;
+}
+
+.is-align-center {
+    align-items: center;
+}
 
 .col-1,
 .col-2,

@@ -1,0 +1,29 @@
+.staff-list {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 -24px -48px;
+}
+.staff-list .staff-item {
+    width: calc(50% - 48px);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 24px 48px;
+}
+
+.staff-title {
+    margin-bottom: 8px;
+}
+.staff-description {
+    color: #666;
+    margin-bottom: 0;
+}
+
+.staff-item .staff-photo {
+    width: 160px;
+    height: 160px;
+    background-color: var(--orange);
+    flex-shrink: 0;
+    margin-right: 32px;
+    border-radius: 80px;
+}
