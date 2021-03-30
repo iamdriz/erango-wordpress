@@ -7,6 +7,7 @@
     color: var(--white);
     min-height: calc(100vh - 96px);
 }
+
 .masthead:after {
     content: '';
     width: 100%;
@@ -18,13 +19,21 @@
     position: relative;
     z-index: 1;
 }
+
 .masthead .container {
     padding-top: 64px;
-    margin-bottom: calc(-360px + 32px);
+    margin-bottom: calc(-360px + 128px);
     display: flex;
     flex-direction: column;
     justify-content: center;
     flex: 1 1 auto;
     position: relative;
     z-index: 2;
+}
+
+.masthead__title {
+    font-size: 48px;
+    line-height: 56px;
+    color: var(--orange);
+    text-align: center;
 }

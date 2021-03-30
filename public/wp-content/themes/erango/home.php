@@ -2,7 +2,7 @@
 
 <div class="sub-header">
   <div class="container">
-    <h1><?php single_post_title(); ?></h1>
+    <h1 class="sub-header__title"><?php single_post_title(); ?></h1>
   </div>
 </div>
 <section class="section section--white" style="padding-top:0;">

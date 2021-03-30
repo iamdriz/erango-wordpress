@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 25%));
     gap: 32px;
-    margin-bottom: 48px;
+    margin: 48px auto;
 }
 
 .card {
@@ -13,30 +13,6 @@
     text-align: center;
     box-shadow: rgba(0, 0, 0, .125) 0 0 16px;
 }
-
-.cards {
-    position: relative;
-    overflow: visible;
-    z-index: 1;
-}
-
-.cards+* {
-    position: relative;
-    z-index: 1;
-}
-
-/* .cards:before {
-    content: '';
-    display: block;
-    position: absolute;
-    z-index: -1;
-    width: 120%;
-    left: -10%;
-    height: 120%;
-    top: -10%;
-    background: url('abstract.svg') center center/contain no-repeat;
-    opacity: .75;
-} */
 
 .card__icon {
     width: 128px;

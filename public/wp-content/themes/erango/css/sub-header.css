@@ -9,15 +9,19 @@
     background-color: var(--white);
     color: var(--blue);
 }
+
 .sub-header--orange {
     background-color: var(--orange);
     color: var(--blue);
 }
+
 .sub-header--blue {
     background-color: var(--blue);
     color: var(--orange);
 }
 
-.sub-header h1 {
-
+.sub-header__title {
+    font-size: 40px;
+    line-height: 48px;
+    margin-bottom: 0;
 }

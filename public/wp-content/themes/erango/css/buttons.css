@@ -11,19 +11,11 @@
     cursor: pointer;
 }
 
-.button {
-    gap: 8px;
-}
-
 .button--large {
     height: 64px;
     font-size: 24px;
     padding-left: 48px;
     padding-right: 48px;
-}
-
-.button--large {
-    gap: 16px;
 }
 
 .button--orange {

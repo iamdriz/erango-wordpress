@@ -12,10 +12,10 @@
 <body <?php body_class(); ?>>
     <header class="header">
         <div class="container">
-            <a class="logo" href="<?php bloginfo('home'); ?>" data-aos="fade-down">
+            <a class="logo" href="<?php bloginfo('home'); ?>">
                 <img src="<?php bloginfo('template_directory'); ?>/logo.png">
             </a>
-            <nav class="" data-aos="fade-down">
+            <nav class="header__nav">
                 <?php wp_nav_menu( array( 
                     'theme_location' => 'header-menu', 
                     'container' => '',
@@ -32,4 +32,4 @@
         </div>
     </header>
 
-    <main class="" id="maincontent" role="main">
+    <main class="main" id="maincontent" role="main">

@@ -7,7 +7,7 @@
 
 <div class="sub-header">
   <div class="container">
-    <h1 class=""><?php the_title(); ?></h1>
+    <h1 class="sub-header__title"><?php the_title(); ?></h1>
   </div>
 </div>
 <?php endif; ?>
@@ -45,7 +45,7 @@
     </div>
   </div>
 </section>
-<section class="section section--off-white">
+<!--<section class="section section--off-white">
       <div class="container">
       <div class="columns is-align-center">
         <div class="col-6">
@@ -58,7 +58,7 @@
         </div>
       </div>
       </div>
-</section>
+</section>-->
 <?php endwhile; ?>
 
 <?php else : ?>

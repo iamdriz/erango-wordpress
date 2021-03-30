@@ -7,7 +7,7 @@
 
 <div class="sub-header">
   <div class="container">
-    <h1 class="font-size-48"><?php the_title(); ?></h1>
+    <h1 class="sub-header__title"><?php the_title(); ?></h1>
   </div>
 </div>
 <?php endif; ?>

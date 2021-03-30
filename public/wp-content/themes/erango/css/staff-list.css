@@ -1,17 +1,17 @@
 .staff-list {
-    display: flex;
-    flex-flow: row wrap;
-    margin: 0 -24px -48px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 50%));
+    gap: 32px;
 }
 .staff-list .staff-item {
-    width: calc(50% - 48px);
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin: 0 24px 48px;
 }
 
 .staff-title {
+    font-size: 24px;
+    line-height: 32px;
     margin-bottom: 8px;
 }
 .staff-description {

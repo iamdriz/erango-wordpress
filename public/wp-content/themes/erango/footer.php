@@ -1,3 +1,24 @@
+    <?php if(is_front_page()) : ?>
+    <div class="section section--orange">
+            <div class="container">
+                <h2>Contact us</h2>
+                <ul class="contact-links">
+                    <li class="">
+                        <a href="mailto:hello@erango.co.uk"><i class="far fa-envelope"></i> hello@erango.co.uk</a>
+                    </li>
+                    <li class="">
+                        <a href="tel:0114123456"><i class="far fa-phone"></i> 0800 000 000</a>
+                    </li>
+                    <li class="">
+                        <a href="https://twitter.com/erangouk"><i class="fab fa-twitter"></i> @erangouk</a>
+                    </li>
+                </ul>
+                <div class="button-group">
+                    <a class="button button--white" href="<?php bloginfo('home'); ?>/contact/">Get in touch</a>
+                </div>
+            </div>
+        </div>
+    <?php endif; ?>
 </main>
 
 <div class="footer">
@@ -126,6 +147,7 @@
             e.preventDefault();
             let burger = $('.burger__link');
             burger.toggleClass('burger__link--active');
+            $('body').toggleClass('show-menu');
         });
     </script>
     <?php wp_footer(); ?>

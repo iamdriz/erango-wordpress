@@ -3,171 +3,165 @@
     <section class="masthead">
         <div class="container">
             <div class="columns is-align-center">
-                <div class="col-8 offset-2 text-center">
-                    <h1 class="color-orange margin-b-48" data-aos="fade-right">A simple management of competencies in a complex business world.</h1>
+                <div class="col-8 offset-2">
+                    <h1 class="masthead__title" data-aos="fade-up">A simple management of competencies in a complex business world.</h1>
                 </div>
             </div>
         </div>
     </section>
-        <section class="section section--off-white" id="section2">
-            <div class="container">
-                <div class="columns is-align-center">
-                    <div class="col-4">
-                        <figure class="" data-aos="fade-right">
-                            <img src="<?php bloginfo('template_directory'); ?>/icon.png" width="640" height="640">
-                        </figure>
-                    </div>
-                    <div class="col-7 offset-1" data-aos="fade-left">
-                        <h2 class="margin-b-16">ERANGO</h2>
-                        <p class="bold font-size-xxl color-grey">A cloud-based software platform that allows you to
-                            organise and manage training, both
-                            online
-                            and classroom-based and record the skills of your people.</p>
-                    </div>
+
+    <section class="section section--off-white">
+        <div class="container">
+
+            <!-- MediaContent -->
+            <div class="media-content">
+                <div class="media-content__media">
+                    <figure class="wp-block-figure">
+                        <img src="<?php bloginfo('template_directory'); ?>/icon.png" width="640" height="640">
+                    </figure>
+                </div>
+                <div class="media-content__content">
+                    <h2>ERANGO</h2>
+                    <p>A cloud-based software platform that allows you to organise and manage training, both online and classroom-based and record the skills of your people.</p>
                 </div>
             </div>
-        </section>
+            <!-- // MediaContent -->
+
+        </div>
+    </section>
         
-        <section class="section section--white" id="">
-            <div class="container">
-                <div class="columns is-align-center">
-                    <div class="col-5">
-                        <div class="" data-aos="fade-right">
-                            <h2 class="margin-b-16">Responsive and fully accessible portals</h2>
-                            <p class="font-size-l color-orange margin-b-24">Tablets and mobile devices, with
-                                email and SMS
-                                push
-                                notifications.</p>
-                            <a class="button button--orange">Learn more <i
-                                    class="far fa-chevron-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-6 offset-1">
-                        <figure class="" data-aos="fade-left">
-                            <img src="<?php bloginfo('template_directory'); ?>/graphic1.svg">
-                        </figure>
+    <section class="section section--white">
+        <div class="container">
+
+            <!-- MediaContent -->
+            <div class="featured-media-content">
+                <div class="featured-media-content__content order-1">
+                    <h2 class="featured-media-content__title">Responsive and fully accessible portals</h2>
+                    <p class="featured-media-content__subtitle">Tablets and mobile devices, with email and SMS push notifications.</p>
+                    <div class="button-group">
+                        <a class="button button--orange" href="<?php bloginfo('home'); ?>/features/">Learn more</a>
                     </div>
                 </div>
-                <div class="section section--off-white section--panel">
-                    <div class="container">
-                        <div class="columns is-align-center">
-                            <div class="col-6">
-                                <figure class="" data-aos="fade-right">
-                                    <img src="<?php bloginfo('template_directory'); ?>/graphic2.svg">
-                                </figure>
-                            </div>
-                            <div class="col-5 offset-1">
-                                <div class="" data-aos="fade-left">
-                                    <h2 class="margin-b-16">Quick and reliable visibility at any time</h2>
-                                    <p class="font-size-l color-orange margin-b-24">See who has been
-                                        trained, with clear and
-                                        immediate reporting at your fingertips.</p>
-                                    <a class="button button--orange">Learn more <i
-                                            class="far fa-chevron-right"></i></a>
-                                </div>
+                <div class="featured-media-content__media order-2">
+                    <figure class="wp-block-figure">
+                        <img src="<?php bloginfo('template_directory'); ?>/graphic1.svg">
+                    </figure>
+                </div>
+            </div>
+            <!-- // MediaContent -->
+
+            <div class="section section--off-white section--panel">
+                <div class="container">
+
+                    <!-- MediaContent -->
+                    <div class="featured-media-content">
+                        <div class="featured-media-content__content order-2">
+                            <h2 class="featured-media-content__title">Quick and reliable visibility at any time</h2>
+                            <p class="featured-media-content__subtitle">See who has been trained, with clear and immediate reporting at your fingertips.</p>
+                            <div class="button-group">
+                                <a class="button button--orange" href="<?php bloginfo('home'); ?>/features/">Learn more</a>
                             </div>
                         </div>
+                        <div class="featured-media-content__media order-1">
+                            <figure class="wp-block-image">
+                                <img src="<?php bloginfo('template_directory'); ?>/graphic2.svg">
+                            </figure>
+                        </div>
                     </div>
+                    <!-- // MediaContent -->
+
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="section section--blue" id="features">
-            <div class="container">
-                <h2 class="color-orange text-center margin-b-48" data-aos="fade">Erango provides audit history to
-                    demonstrate when
-                    people
-                    gained those
-                    skills and highlights when staff
-                    skills are about to expire so they can be retrained.</h2>
-                <div class="cards">
-                    <div class="card">
-                        <i class="fad fa-monitor-heart-rate card__icon"></i>
-                        <h3 class="card-title">Feature 1</h3>
-                    </div>
-                    <div class="card">
-                        <i class="fad fa-chalkboard-teacher card__icon"></i>
-                        <h3 class="card-title">Feature 2</h3>
-                    </div>
-                    <div class="card">
-                        <i class="fad fa-database card__icon"></i>
-                        <h3 class="card-title">Feature 3</h3>
-                    </div>
-                    <div class="card">
-                        <i class="fad fa-mobile-alt card__icon"></i>
-                        <h3 class="card-title">Feature 4</h3>
-                    </div>
-                    <div class="card">
-                        <i class="fad fa-users-class card__icon"></i>
-                        <h3 class="card-title">Feature 5</h3>
-                    </div>
-                    <div class="card">
-                        <i class="fad fa-box-check card__icon"></i>
-                        <h3 class="card-title">Feature 6</h3>
-                    </div>
-                    <div class="card">
-                        <i class="fad fa-users card__icon"></i>
-                        <h3 class="card-title">Feature 7</h3>
-                    </div>
-                    <div class="card">
-                        <i class="fad fa-headset card__icon"></i>
-                        <h3 class="card-title">Feature 8</h3>
-                    </div>
+    <section class="section section--blue">
+        <div class="container">
+
+            <h2>Erango provides audit history to demonstrate when people gained those skills and highlights when staff skills are about to expire so they can be retrained.</h2>
+            <div class="cards">
+                <div class="card">
+                    <i class="fad fa-monitor-heart-rate card__icon"></i>
+                    <h3 class="card-title">Skills Management</h3>
                 </div>
-                <div class="text-center">
-                    <a class="button button--large button--orange2" href="<?php echo bloginfo('home'); ?>/features/">Learn more</a>
+                <div class="card">
+                    <i class="fad fa-chalkboard-teacher card__icon"></i>
+                    <h3 class="card-title">Competencies</h3>
+                </div>
+                <div class="card">
+                    <i class="fad fa-database card__icon"></i>
+                    <h3 class="card-title">Rapid Audit</h3>
+                </div>
+                <div class="card">
+                    <i class="fad fa-mobile-alt card__icon"></i>
+                    <h3 class="card-title">Notifications</h3>
+                </div>
+                <div class="card">
+                    <i class="fad fa-users-class card__icon"></i>
+                    <h3 class="card-title">Auto Enrolment</h3>
+                </div>
+                <div class="card">
+                    <i class="fad fa-box-check card__icon"></i>
+                    <h3 class="card-title">Offline Courses</h3>
+                </div>
+                <div class="card">
+                    <i class="fad fa-users card__icon"></i>
+                    <h3 class="card-title">Programmes</h3>
+                </div>
+                <div class="card">
+                    <i class="fad fa-headset card__icon"></i>
+                    <h3 class="card-title">SCORM</h3>
                 </div>
             </div>
-        </section>
+            <div class="button-group">
+                <a class="button button--orange2" href="<?php echo bloginfo('home'); ?>/features/">Learn more</a>
+            </div>
 
-        <section class="section section--off-white" id="clients">
-            <div class="container">
-                <h2 class="text-center margin-b-48" data-aos="fade">Who we've worked with</h2>
-                <div class="clients" data-aos="fade">
-                    <div class="client">
-                        <img src="<?php bloginfo('template_directory'); ?>/client.png">
-                    </div>
-                    <div class="client">
-                        <img src="<?php bloginfo('template_directory'); ?>/client.png">
-                    </div>
-                    <div class="client">
-                        <img src="<?php bloginfo('template_directory'); ?>/client.png">
-                    </div>
-                    <div class="client">
-                        <img src="<?php bloginfo('template_directory'); ?>/client.png">
-                    </div>
-                    <div class="client">
-                        <img src="<?php bloginfo('template_directory'); ?>/client.png">
-                    </div>
-                    <div class="client">
-                        <img src="<?php bloginfo('template_directory'); ?>/client.png">
-                    </div>
-                    <div class="client">
-                        <img src="<?php bloginfo('template_directory'); ?>/client.png">
-                    </div>
-                    <div class="client">
-                        <img src="<?php bloginfo('template_directory'); ?>/client.png">
-                    </div>
+        </div>
+    </section>
+
+    <section class="section section--off-white">
+        <div class="container">
+
+            <h2>Who we've worked with</h2>
+            <div class="clients">
+                <div class="client">
+                    <img src="<?php bloginfo('template_directory'); ?>/client.png">
+                </div>
+                <div class="client">
+                    <img src="<?php bloginfo('template_directory'); ?>/client.png">
+                </div>
+                <div class="client">
+                    <img src="<?php bloginfo('template_directory'); ?>/client.png">
+                </div>
+                <div class="client">
+                    <img src="<?php bloginfo('template_directory'); ?>/client.png">
+                </div>
+                <div class="client">
+                    <img src="<?php bloginfo('template_directory'); ?>/client.png">
+                </div>
+                <div class="client">
+                    <img src="<?php bloginfo('template_directory'); ?>/client.png">
+                </div>
+                <div class="client">
+                    <img src="<?php bloginfo('template_directory'); ?>/client.png">
+                </div>
+                <div class="client">
+                    <img src="<?php bloginfo('template_directory'); ?>/client.png">
                 </div>
             </div>
-        </section>
+            
+        </div>
+    </section>
 
+<?php if (have_posts()) : ?>
 
-<div class="section section--orange text-center">
-    <div class="container">
-        <h2 class="text-center margin-b-48">Contact us</h2>
-        <ul class="contact-links">
-            <li class="">
-                <a href="#"><i class="far fa-envelope"></i> hello@erango.co.uk</a>
-            </li>
-            <li class="">
-                <a href="#"><i class="far fa-phone"></i> 0800 000 000</a>
-            </li>
-            <li class="">
-                <a href="#"><i class="fab fa-twitter"></i> @erango</a>
-            </li>
-        </ul>
-        <a class="button button--large button--white" href="<?php bloginfo('home'); ?>/contact/">Get in touch</a>
-    </div>
-</div>
+<?php while (have_posts()) : the_post(); ?>
+
+<?php the_content(); ?>
+
+<?php endwhile; ?>
+
+<?php endif; ?>
+
 <?php get_footer(); ?>
