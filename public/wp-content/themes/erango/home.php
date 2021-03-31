@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="sub-header">
+<div class="sub-header sub-header--off-white">
   <div class="container">
     <h1 class="sub-header__title"><?php single_post_title(); ?></h1>
   </div>

@@ -9,7 +9,7 @@ function erango_sub_header_register_block() {
 	wp_register_script(
 		'erango-sub-header-block',
 		get_stylesheet_directory_uri() . '/blocks/sub-header/block.js',
-		array( 'wp-blocks', 'wp-element', 'wp-block-editor' ),
+		array( 'wp-blocks', 'wp-editor', 'wp-element' ),
 		filemtime( get_stylesheet_directory() . '/blocks/sub-header/block.js' )
 	);
 

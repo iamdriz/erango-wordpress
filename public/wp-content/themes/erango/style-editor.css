@@ -1,0 +1,20 @@
+
+
+.section {
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+
+.section--off-white {
+    background: #EEE;
+}
+
+.container {
+    max-width: 1200px;
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+.wp-block {
+    border: orangered 2px dashed;
+}

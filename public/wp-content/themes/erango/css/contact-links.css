@@ -1,20 +1,41 @@
 .contact-links {
     list-style: none;
     display: flex;
-    align-items: center;
-    justify-content: center;
     margin-top: 48px;
     margin-bottom: 48px;
+}
+
+@media (max-width: 767px) {
+    .contact-links {
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+    .contact-links li {
+        margin-top: 32px;
+    }
+    .contact-links li:first-child {
+        margin-top: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .contact-links {
+        align-items: center;
+        justify-content: center;
+        flex-flow: row wrap;
+    }
+    .contact-links li {
+        margin-left: 32px;
+    }
+    .contact-links li:first-child {
+        margin-left: 0;
+    }
 }
 
 .contact-links li {
     font-size: 24px;
     line-height: 32px;
-    margin-left: 32px;
-}
-
-.contact-links li:first-child {
-    margin-left: 0;
 }
 
 .contact-links li a {

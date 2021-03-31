@@ -1,7 +1,7 @@
     <?php if(is_front_page()) : ?>
     <div class="section section--orange">
             <div class="container">
-                <h2>Contact us</h2>
+                <h2 class="has-text-align-center">Contact us</h2>
                 <ul class="contact-links">
                     <li class="">
                         <a href="mailto:hello@erango.co.uk"><i class="far fa-envelope"></i> hello@erango.co.uk</a>
@@ -13,7 +13,7 @@
                         <a href="https://twitter.com/erangouk"><i class="fab fa-twitter"></i> @erangouk</a>
                     </li>
                 </ul>
-                <div class="button-group">
+                <div class="button-group button-group--justify-center">
                     <a class="button button--white" href="<?php bloginfo('home'); ?>/contact/">Get in touch</a>
                 </div>
             </div>
@@ -25,7 +25,7 @@
     <div class="container">
         <div class="footer-columns">
             <div class="footer-column footer-column__left">
-                <p class="margin-b-16">Erango is part of the Nicholas Associates Group of Companies.</p>
+                <p>Erango is part of the Nicholas Associates Group of Companies.</p>
                 <p>Registered in England - Company number: 03606174 - VAT Registration no: GB727824120</p>
             </div>
             <div class="footer-column footer-column__center">
@@ -50,7 +50,7 @@
                 <p>Copyright &copy; <?php echo date('Y'); ?> <?php echo bloginfo('sitetitle') ?>. All rights reserved.</p>
             </div>
             <div class="footer-column footer-column__right">
-                <nav id="footer-menu" class="footer-nav">
+                <nav class="footer-nav">
                     <?php wp_nav_menu( array( 
                     'theme_location' => 'footer-menu', 
                     'container' => '',

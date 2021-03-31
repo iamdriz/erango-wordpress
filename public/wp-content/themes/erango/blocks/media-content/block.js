@@ -2,8 +2,8 @@
     var el = element.createElement;
     var RichText = editor.RichText;
 
-    blocks.registerBlockType('erango/erango-sub-header-block', {
-        title: 'Sub Header Block',
+    blocks.registerBlockType('erango/erango-media-content-block', {
+        title: 'Media Content Block',
         icon: 'universal-access-alt',
         category: 'layout',
         example: {},
@@ -14,8 +14,8 @@
             }
             
             return el(
-                'section', { className: 'sub-header ' + props.className },
-                el('div', { className: 'container' },
+                'div', { className: 'media-content ' + props.className },
+                el('div', { className: 'media-content__content' },
                 el( RichText, {
                     tagName: 'h1',
                     className: 'sub-header__title',
@@ -26,8 +26,8 @@
         },
         save: function (props) {
             return el(
-                'section', { className: 'sub-header ' + props.className },
-                el('div', { className: 'container' },
+                'div', { className: 'media-content ' + props.className },
+                el('div', { className: 'media-content__content' },
                 el( RichText.Content, {
                     tagName: 'h1',
                     value: props.attributes.content,

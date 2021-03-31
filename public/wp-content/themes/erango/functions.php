@@ -1,5 +1,11 @@
 <?php
 
+require get_stylesheet_directory() . '/blocks/sub-header/index.php';
+require get_stylesheet_directory() . '/blocks/section/index.php';
+require get_stylesheet_directory() . '/blocks/section-panel/index.php';
+require get_stylesheet_directory() . '/blocks/masthead/index.php';
+require get_stylesheet_directory() . '/blocks/media-content/index.php';
+
 /**
  * Add Menus
  */
@@ -21,8 +27,6 @@ function erango_css() {
 	 filemtime(get_stylesheet_directory() . '/style.css'), 'all');
 }
 add_action('wp_enqueue_scripts', 'erango_css');
-
-
 
 function erango_numeric_posts_nav() {
  
@@ -55,7 +59,6 @@ function erango_numeric_posts_nav() {
  
     echo '<ul class="pagination">' . "\n";
  
-    /** Previous Post Link */
     // if ( get_previous_posts_link() )
     //     printf( '<li>%s</li>' . "\n", get_previous_posts_link() );
  
@@ -80,38 +83,15 @@ function erango_numeric_posts_nav() {
     if ( ! in_array( $max, $links ) ) {
         if ( ! in_array( $max - 1, $links ) )
             echo '<li>…</li>' . "\n";
- 
         $class = $paged == $max ? ' class="active"' : '';
         printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( $max ) ), $max );
     }
- 
-    /** Next Post Link */
     // if ( get_next_posts_link() )
     //     printf( '<li>%s</li>' . "\n", get_next_posts_link() );
- 
     echo '</ul>' . "\n";
- 
 }
 
-// enable links manager
 add_filter( 'pre_option_link_manager_enabled', '__return_true' );
-
-// enable all post formats
-add_theme_support( 'post-formats', 
-	array( 
-		'aside', 
-		'gallery',
-		'link',
-		'image',
-		'quote',
-		'status',
-		'video',
-		'audio',
-		'chat'
-	) 
-);
-add_post_type_support( 'post', 'post-formats' );
-add_post_type_support( 'page', 'post-formats' );
 
 
 function erango_change_search_url() {
@@ -121,3 +101,6 @@ function erango_change_search_url() {
     }   
 }
 add_action('template_redirect', 'erango_change_search_url');
+
+add_theme_support( 'editor-styles' );
+add_editor_style( './style-editor.css' );

@@ -1,5 +1,4 @@
 
-
 .featured-media-content {
     display: flex;
     flex-flow: row wrap;
@@ -24,21 +23,12 @@
     }
 }
 
-.featured-media-content__title {
+.featured-media-content h2 {
     margin-bottom: 16px;
 }
-.featured-media-content__subtitle {
+.featured-media-content p {
     font-size: 20px;
     line-height: 28px;
     color: var(--orange);
     margin-bottom: 24px;
-}
-
-@media(min-width: 768px) {
-    .order-1 {
-        order: 1;
-    }
-    .order-2 {
-        order: 2;
-    }
 }
