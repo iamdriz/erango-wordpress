@@ -1,18 +1,4 @@
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 16px;
-    padding-right: 16px;
-}
 
-@media (min-width: 768px) {
-    .container {
-        padding-left: 32px;
-        padding-right: 32px;
-    }
-}
 
 /* the following is now deprecated in favour of using WP columns and media text blocks */
 /*
