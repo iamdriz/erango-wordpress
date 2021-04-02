@@ -6,7 +6,7 @@
 
 		<header class="article-header">
 			<div class="container">
-				<h1 class="font-size-48 margin-b-24"><?php the_title(); ?></h1>
+				<h1 class="article-header__title"><?php the_title(); ?></h1>
 				<ul class="article-header__meta">
 					<li><i class="far fa-clock"></i> <?php echo get_the_time(__('l, F jS, Y', 'kubrick')); ?></li>
 					<li><i class="far fa-user"></i> <a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>"><b><?php the_author_meta('user_login'); ?></b></a></li>
@@ -56,7 +56,7 @@
 
 				</div>
 			</div>
-			<h2 class="text-center">Share this article</h2>
+			<h3 class="has-text-align-center">Share this article</h3>
 			<ul class="social">
 				<li class="">
 					<a href="https://twitter.com" target="_blank" aria-label="Twitter"><i

@@ -3,21 +3,28 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 32px;
 }
 
 .pagination li {
-
+    margin-right: 16px;
+    &:last-child {
+        margin-right: 0;
+    }
 }
 
 .pagination li a {
-
+    background-color: var(--blue);
+    color: var(--white);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 999em;
 }
 
 .pagination li.active {
-
-}
-
-.pagination li.active a {
-    
+    a {
+        background-color: var(--orange);
+    }
 }

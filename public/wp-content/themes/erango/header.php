@@ -22,7 +22,7 @@
                     'container' => '',
                     'container_class' => '',
                     'fallback_cb' => false ) ); ?>
-                <a class="wp-block-button__link has-orange-background-color has-background" href="<?php bloginfo('home'); ?>/contact/">Demo</a>
+                <a class="wp-block-button__link has-orange-background-color has-background" href="<?php bloginfo('home'); ?>/contact/#demo">Demo</a>
             </nav>
             <div class="burger">
                 <a class="burger__link">

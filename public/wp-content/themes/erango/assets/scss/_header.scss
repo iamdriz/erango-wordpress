@@ -28,7 +28,7 @@
     top: 0;
     left: 0;
     right: 0;
-    background: var(--blue);
+    background-color: var(--blue);
     z-index: 100;
     transition: all .2s ease-in-out;
 }
@@ -52,12 +52,10 @@ body {
     overflow: hidden;
 }
 
-
 .header nav {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    gap: 32px;
 }
 
 .header nav ul {
@@ -68,6 +66,9 @@ body {
     margin-bottom: 0;
 }
 @media (min-width: 992px) {
+    .header nav ul {
+        margin-right: 32px;
+    }
     .header nav ul li {
         margin-left: 32px;
     }
@@ -126,6 +127,7 @@ body {
     }
 
     .header nav ul {
+        margin-bottom: 32px;
         flex-direction: column;
     }
 
@@ -179,14 +181,6 @@ body {
     bottom: 8px;
     left: 0;
     right: 0;
-}
-
-.burger__link:not(.burger__link--active):hover .burger__line:nth-child(1) {
-    top: 4px;
-}
-
-.burger__link:not(.burger__link--active):hover .burger__line:nth-child(2) {
-    bottom: 4px;
 }
 
 .burger__link--active .burger__line {
