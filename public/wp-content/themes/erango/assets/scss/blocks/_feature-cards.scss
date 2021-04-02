@@ -1,18 +1,15 @@
-.cards {
+.feature-cards {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 50%));
-    gap: 16px;
-    margin: 48px auto;
 }
 
 @media (min-width: 768px) {
-    .cards {
+    .feature-cards {
         grid-template-columns: repeat(4, minmax(0, 25%));
-        gap: 32px;
     }
 }
 
-.card {
+.feature-card {
     padding: 32px;
     background-color: var(--white);
     border-radius: 32px;
@@ -21,21 +18,22 @@
     box-shadow: rgba(0, 0, 0, .125) 0 0 16px;
 }
 
-.card__icon {
+.feature-card__icon {
+    background-color: var(--off-white);
+    color: var(--orange);
     width: 128px;
     height: 128px;
-    background-color: var(--off-white);
-    border-radius: 64px;
+    border-radius: 999em;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     font-size: 64px;
     line-height: 72px;
     margin-bottom: 24px;
-    color: var(--orange);
 }
 
-.card-title {
+.feature-card-title {
     font-size: 24px;
+    margin-top: 0;
     margin-bottom: 0;
 }
