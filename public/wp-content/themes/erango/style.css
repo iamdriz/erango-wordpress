@@ -6,29 +6,3 @@ Author URI: https://driz.co.uk
 Description: Erango WordPress Theme.
 Version: 0.1
 */
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-@import 'css/reboot.css';
-@import 'css/fontawesome.css';
-@import 'css/columns.css';
-@import 'css/typography.css';
-@import 'css/header.css';
-@import 'css/masthead.css';
-@import 'css/sections.css';
-@import 'css/buttons.css';
-@import 'css/footer.css';
-@import 'css/cards.css';
-@import 'css/contact-links.css';
-@import 'css/social-links.css';
-@import 'css/slick-slider.css';
-@import 'css/post-list.css';
-@import 'css/sub-header.css';
-@import 'css/article.css';
-@import 'css/staff-list.css';
-@import 'css/forms.css';
-@import 'css/pagination.css';
-@import 'css/features-list.css';
-@import 'css/image-slider.css';
-@import 'css/media-content.css';
-@import 'css/intro.css';

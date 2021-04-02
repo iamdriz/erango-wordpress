@@ -1,0 +1,74 @@
+.section {
+    background-color: var(--white);
+    color: var(--blue);
+    padding-top: 48px;
+    padding-bottom: 48px;
+    position: relative;
+}
+
+@media (min-width: 768px) {
+    .section {
+        padding-top: 64px;
+        padding-bottom: 64px;
+    }
+}
+
+.section--white {
+    background-color: var(--white);
+    color: var(--blue);
+}
+.section--white a {
+    color: var(--blue);
+}
+
+.section--off-white {
+    background-color: var(--off-white);
+    color: var(--blue);
+}
+.section--off-white a {
+    color: var(--blue);
+}
+.section--off-white.section--brandmark {
+    background-image: url('../img/brandmark-white.svg');
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.section--orange {
+    background-color: var(--orange);
+    color: var(--white);
+}
+.section--orange a {
+    color: var(--white);
+}
+.section--blue {
+    background-color: var(--blue);
+    color: var(--white);
+}
+.section--blue a {
+    color: var(--orange);
+}
+.section--blue.section--brandmark {
+    background-image: url('../img/brandmark-black.svg');
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.section--full-height {
+    min-height: 100vh;
+}
+
+.section--break-out {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+
+    margin-top: -64px;
+    margin-bottom: 64px;
+    padding-bottom: 480px;
+}

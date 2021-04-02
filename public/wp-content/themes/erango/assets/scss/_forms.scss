@@ -1,0 +1,72 @@
+
+input[type=text],
+input[type=email],
+input[type=tel],
+textarea {
+    width: 100%;
+    background-color: var(--off-white);
+    height: 48px;
+    padding: 0 16px;
+    font-size: inherit;
+    font-family: inherit;
+    line-height: inherit;
+    border-radius: 8px;
+}
+
+textarea {
+    height: auto;
+    min-height: 256px;
+    padding: 16px;
+    resize: vertical;
+}
+
+label {
+    font-weight: 600;
+}
+.wpcf7-form-control-wrap {
+    display: block;
+    margin-top: 8px;
+}
+
+form {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 -16px;
+}
+form > div {
+    width: 50%;
+    padding: 0 16px;
+    margin-bottom: 16px;
+}
+form > .form__group--full-width,
+form > .form__actions {
+    width: 100%;
+}
+form > .form__actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input[type=submit] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 32px;
+    padding-right: 32px;
+    border-radius: 999em;
+    height: 48px;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 600;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+    background-color: var(--white);
+    color: var(--blue);
+}
+input[type=submit]:hover {
+    background-color: var(--blue);
+    color: var(--white);
+}
+.wpcf7-not-valid-tip {
+    margin-top: 8px;
+}

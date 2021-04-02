@@ -2,9 +2,10 @@
 
 require get_stylesheet_directory() . '/blocks/sub-header/index.php';
 require get_stylesheet_directory() . '/blocks/section/index.php';
-require get_stylesheet_directory() . '/blocks/section-panel/index.php';
+require get_stylesheet_directory() . '/blocks/panel/index.php';
 require get_stylesheet_directory() . '/blocks/masthead/index.php';
-require get_stylesheet_directory() . '/blocks/media-content/index.php';
+require get_stylesheet_directory() . '/blocks/feature-card/index.php';
+require get_stylesheet_directory() . '/blocks/contact-links/index.php';
 
 /**
  * Add Menus
@@ -23,8 +24,8 @@ function erango_css() {
 	// get_stylesheet_directory_uri() => child theme
 	// get_template_directory_uri() => parent theme
 	// remove uri for filemtime as we want server rather than web address
-	wp_enqueue_style('erango', get_stylesheet_directory_uri() . '/style.css', array(),
-	 filemtime(get_stylesheet_directory() . '/style.css'), 'all');
+	wp_enqueue_style('erango', get_stylesheet_directory_uri() . '/assets/css/style.css', array(),
+	 filemtime(get_stylesheet_directory() . '/assets/css/style.css'), 'all');
 }
 add_action('wp_enqueue_scripts', 'erango_css');
 
@@ -103,4 +104,91 @@ function erango_change_search_url() {
 add_action('template_redirect', 'erango_change_search_url');
 
 add_theme_support( 'editor-styles' );
-add_editor_style( './style-editor.css' );
+add_editor_style( './assets/css/style-editor.css' );
+
+add_theme_support( 'editor-font-sizes', array(
+    array(
+        'name' => 'S',
+        'size' => 12,
+        'slug' => 'small'
+    ),
+    array(
+        'name' => 'R',
+        'size' => 16,
+        'slug' => 'regular'
+    ),
+    array(
+        'name' => 'L',
+        'size' => 20,
+        'slug' => 'large'
+    ),
+    array(
+        'name' => 'XL',
+        'size' => 24,
+        'slug' => 'xl'
+    ),
+    array(
+        'name' => '2XL',
+        'size' => 32,
+        'slug' => '2xl'
+    ),
+    array(
+        'name' => '3XL',
+        'size' => 36,
+        'slug' => '3xl'
+    ),
+    array(
+        'name' => '4XL',
+        'size' => 40,
+        'slug' => '4xl'
+    ),
+    array(
+        'name' => '5XL',
+        'size' => 48,
+        'slug' => '5xl'
+    )
+) );
+
+
+add_theme_support(
+    'editor-gradient-presets', array()
+);
+
+add_theme_support( 'editor-color-palette', array(
+    array(
+        'name' => 'Navy',
+        'slug' => 'navy',
+        'color' => '#16284c',
+    ),
+    array(
+        'name' => 'Orange',
+        'slug' => 'orange',
+        'color' => '#f0a150',
+    ),
+    array(
+        'name' => 'Stone',
+        'slug' => 'stone',
+        'color' => '#f5f5f5',
+    ),
+    array(
+        'name' => 'Black',
+        'slug' => 'black',
+        'color' => '#000000',
+    ),
+    array(
+        'name' => 'White',
+        'slug' => 'white',
+        'color' => '#ffffff',
+    ),
+    array(
+        'name' => 'Grey',
+        'slug' => 'grey',
+        'color' => '#666666',
+    )
+) );
+
+add_theme_support( 'wp-block-styles' );
+add_theme_support( 'align-wide' );
+add_theme_support( 'responsive-embeds' );
+add_theme_support( 'custom-spacing' );
+add_theme_support( 'experimental-link-color' );

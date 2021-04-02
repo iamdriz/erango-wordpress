@@ -1,0 +1,76 @@
+.panel {
+    background-color: var(--white);
+    color: var(--blue);
+    padding-top: 48px;
+    padding-bottom: 48px;
+    position: relative;
+    margin-top: 48px;
+    margin-bottom: 48px;
+}
+
+.panel:first-of-type {
+    margin-top: 0;
+}
+
+.panel:last-of-type {
+    margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+    .panel {
+        padding-top: 64px;
+        padding-bottom: 64px;
+    }
+}
+
+@media (min-width: 768px) {
+    .panel {
+        margin-top: 64px;
+        margin-bottom: 64px;
+    }
+}
+
+@media (max-width: 767px) {
+    .panel {
+        margin-left: -16px;
+        margin-right: -16px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .panel {
+        margin-left: -32px;
+        margin-right: -32px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .panel {
+        border-radius: 16px;
+        margin-left: -64px;
+        margin-right: -64px;
+    }
+}
+
+.panel--white {
+    background-color: var(--white);
+    color: var(--blue);
+}
+
+.panel--off-white {
+    background-color: var(--off-white);
+    color: var(--blue);
+}
+
+.panel--orange {
+    background-color: var(--orange);
+    color: var(--white);
+}
+
+.panel--blue {
+    background-color: var(--blue);
+    color: var(--white);
+}
+.panel--blue a {
+    color: var(--orange);
+}

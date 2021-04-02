@@ -1,0 +1,35 @@
+
+@import 'reboot';
+// @import 'fontawesome';
+@import 'columns';
+@import 'typography';
+@import 'header';
+@import 'footer';
+@import 'social-links';
+@import 'slick-slider';
+@import 'post-list';
+@import 'article';
+// @import 'forms';
+@import 'pagination';
+@import 'image-slider';
+@import 'wp-blocks';
+
+@import 'blocks/masthead';
+@import 'blocks/sections';
+@import 'blocks/intro';
+@import 'blocks/features-list';
+@import 'blocks/staff-list';
+@import 'blocks/sub-header';
+@import 'blocks/cards';
+@import 'blocks/panel';
+@import 'blocks/contact-links';
+
+.wp-block {
+    border: orangered 2px dashed;
+}
+
+.wp-block,
+.wp-block[data-align='wide'],
+.wp-block[data-align='full'] {
+    max-width: 100%;
+}
