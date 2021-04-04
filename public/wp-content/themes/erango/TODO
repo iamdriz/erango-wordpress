@@ -1,18 +1,14 @@
 TODO
 - Menu font size on mobile
 - Import poppins into style editor
-- Style up block buttons
-- Feature cards block
 - Client slider block
 - Staff list block
 - Update all breakpoints to match the WordPress ones
-- Remove the columns (from masthead too)
 - Update container CSS to use 90% instead of the left and right padding?
 - Post list on mobile and desktop styles
 - Update Archive.php to use same layout as home.php
 - Update home.php to use proper thumbnails, loop, etc
 - Update single.php
-- Style up contact form (add divs in the editor view?)
 - Add content styles (e.g. lists, images, etc)
 - Look at header height (especially on mobile)
 - Add post thumbnail sizes in functions.php
@@ -20,6 +16,12 @@ TODO
 - Add block styles (where needed)
 - Update font sizes to be responsive
 
+IN PROGRESS
+- Feature cards block
+- Style up block buttons
+- Style up contact form (add divs in the editor view?)
+
 DONE
 - Add fonts and colors to the editor
 - Style up media text to use more padding and remove padding on left or right
+- Remove the columns (from masthead too)
