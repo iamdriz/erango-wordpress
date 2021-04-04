@@ -1126,23 +1126,14 @@ body {
   margin-bottom: 0;
 }
 
-.feature-cards {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 50%));
-}
-
-@media (min-width: 768px) {
-  .feature-cards {
-    grid-template-columns: repeat(4, minmax(0, 25%));
-  }
-}
 .feature-card {
   padding: 32px;
   background-color: var(--white);
-  border-radius: 32px;
   color: var(--blue);
+  border-radius: 16px;
   text-align: center;
   box-shadow: rgba(0, 0, 0, 0.125) 0 0 16px;
+  margin-bottom: 16px;
 }
 
 .feature-card__icon {
@@ -1154,13 +1145,13 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 64px;
-  line-height: 72px;
   margin-bottom: 24px;
 }
+.feature-card__icon .fa, .feature-card__icon .fab, .feature-card__icon .fad, .feature-card__icon .fal, .feature-card__icon .far, .feature-card__icon .fas {
+  font-size: 64px;
+}
 
-.feature-card-title {
-  font-size: 24px;
+.feature-card__title {
   margin-top: 0;
   margin-bottom: 0;
 }

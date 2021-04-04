@@ -4,6 +4,7 @@ require get_stylesheet_directory() . '/blocks/sub-header/index.php';
 require get_stylesheet_directory() . '/blocks/section/index.php';
 require get_stylesheet_directory() . '/blocks/panel/index.php';
 require get_stylesheet_directory() . '/blocks/masthead/index.php';
+require get_stylesheet_directory() . '/blocks/feature-cards/index.php';
 require get_stylesheet_directory() . '/blocks/feature-card/index.php';
 require get_stylesheet_directory() . '/blocks/contact-links/index.php';
 
@@ -192,3 +193,15 @@ add_theme_support( 'align-wide' );
 add_theme_support( 'responsive-embeds' );
 add_theme_support( 'custom-spacing' );
 add_theme_support( 'experimental-link-color' );
+
+
+function client_slider_function() {
+    return '<div class="clients">
+            <div class="client"><img src="' . get_stylesheet_directory_uri() . '/assets/img/client.png"></div>
+            <div class="client"><img src="' . get_stylesheet_directory_uri() . '/assets/img/client.png"></div>
+        </div>';
+}
+function register_shortcodes(){
+    add_shortcode('client-slider', 'client_slider_function');
+}
+add_action( 'init', 'register_shortcodes');

@@ -7,14 +7,14 @@ function erango_feature_card_register_block() {
 	}
 
 	wp_register_script(
-		'erango-feature-card-block',
+		'erango-feature-card',
 		get_stylesheet_directory_uri() . '/blocks/feature-card/block.js',
-		array( 'wp-blocks', 'wp-i18n', 'wp-element', 'wp-editor', 'underscore' ),
+		array( 'wp-blocks', 'wp-editor', 'wp-element', 'wp-block-editor' ),
 		filemtime( get_stylesheet_directory() . '/blocks/feature-card/block.js' )
 	);
 
-	register_block_type( 'erango/erango-feature-card-block', array(
-		'editor_script' => 'erango-feature-card-block', // enqueues the script after register
+	register_block_type( 'erango/erango-feature-card', array(
+		'editor_script' => 'erango-feature-card', // enqueues the script after register
 	) );
 
 }
