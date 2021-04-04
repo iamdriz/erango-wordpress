@@ -6,7 +6,6 @@ TODO
 - Update all breakpoints to match the WordPress ones
 - Update container CSS to use 90% instead of the left and right padding?
 - Post list on mobile and desktop styles
-- Update Archive.php to use same layout as home.php
 - Update home.php to use proper thumbnails, loop, etc
 - Update single.php
 - Add content styles (e.g. lists, images, etc)
@@ -25,3 +24,4 @@ DONE
 - Add fonts and colors to the editor
 - Style up media text to use more padding and remove padding on left or right
 - Remove the columns (from masthead too)
+- Update Archive.php to use same layout as home.php

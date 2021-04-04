@@ -23,7 +23,7 @@
 				</div>
 			</div>
 
-			<section class="section section--white" style="padding-top:0;">
+			<section class="section section--white">
 				<div class="container">
 					<?php get_template_part('template-parts/post-list'); ?> 
 				</div>
