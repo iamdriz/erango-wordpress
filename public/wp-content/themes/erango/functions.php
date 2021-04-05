@@ -256,7 +256,7 @@ function client_slider() {
     $clients_html = '<div class="clients">';
     $clients_query = new WP_Query('post_type=client&posts_per_page=999');
     while ($clients_query->have_posts()) : $clients_query->the_post();
-        $clients_html .= '<div class="client"><a href="' . the_permalink() . '">' . (has_post_thumbnail() ? the_post_thumbnail() : the_title()) . '</a></div>';
+        $clients_html .= '<div class="client">' . (has_post_thumbnail() ? '<img src="'.get_the_post_thumbnail_url().'">' : get_the_title()) . '</div>';
     endwhile;
     $clients_html .= '</div>';
     return $clients_html;
