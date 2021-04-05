@@ -24,16 +24,16 @@
 			</div>
 			<h3 class="has-text-align-center">Share this article</h3>
 			<ul class="social">
-				<li class="">
-					<a href="https://twitter.com" target="_blank" aria-label="Twitter"><i
+				<li class="social-item">
+					<a href="https://twitter.com/share/?url=<?php echo the_permalink(); ?>" target="_blank" aria-label="Twitter"><i
 							class="fab fa-twitter"></i></a>
 				</li>
-				<li class="">
-					<a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i
+				<li class="social-item">
+					<a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo the_permalink(); ?>" target="_blank" aria-label="Facebook"><i
 							class="fab fa-facebook"></i></a>
 				</li>
-				<li class="">
-					<a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn"><i
+				<li class="social-item">
+					<a href="https://www.linkedin.com/sharing/share-offsite/?url=<?php echo the_permalink(); ?>" target="_blank" aria-label="LinkedIn"><i
 							class="fab fa-linkedin"></i></a>
 				</li>
 			</ul>
