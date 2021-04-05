@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 
-<div class="sub-header">
+<div class="sub-header sub-header--off-white">
   <div class="container">
-    <h1 class="font-size-48">Not found</h1>
+    <h1 class="sub-header__title">Not found</h1>
   </div>
 </div>
 

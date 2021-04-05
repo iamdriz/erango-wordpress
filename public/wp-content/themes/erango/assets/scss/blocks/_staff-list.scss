@@ -1,36 +1,79 @@
 .staff-list {
-    display: grid;
-    grid-template-columns: repeat(1, minmax(0, 100%));
-    gap: 16px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-top: 32px;
+    margin-bottom: 32px;
 }
-@media (min-width: 768px) {
-    .staff-list {
-        grid-template-columns: repeat(2, minmax(0, 50%));
-        gap: 32px;
+@media (min-width: 992px) {
+    .staff-list > .staff-list-item {
+        display: flex;
+        flex-flow: row nowrap;
+        width: 48%;
+        margin-right: 4%;
+        margin-top: 4%;
+        &:nth-child(1),
+        &:nth-child(2) {
+            margin-top: 0;
+        }
+        &:nth-of-type(2n) {
+            margin-right: 0;
+        }
+    }
+    .staff-list > .staff-list-item > .staff-list-item__icon {
+        margin-right: 4%;
     }
 }
 
-.staff-item {
-    display: flex;
-    justify-content: flex-start;
+@media (min-width: 768px) and (max-width: 991px) {
+    .staff-list > .staff-list-item {
+        display: flex;
+        flex-flow: row nowrap;
+        width: 100%;
+        margin-top: 4%;
+        &:nth-child(1) {
+            margin-top: 0;
+        }
+    }
+    .staff-list > .staff-list-item > .staff-list-item__icon {
+        margin-right: 4%;
+    }
+}
+
+@media (max-width: 767px) {
+    .staff-list > .staff-list-item {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        margin-top: 4%;
+        &:nth-child(1) {
+            margin-top: 0;
+        }
+    }
+    .staff-list > .staff-list-item > .staff-list-item__icon {
+        margin-bottom: 4%;
+    }
+}
+.staff-list-item__icon {
+    background-color: var(--off-white);
+    color: var(--orange);
+    width: 128px;
+    height: 128px;
+    border-radius: 999em;
+    display: inline-flex;
     align-items: center;
+    justify-content: center;
+    flex: 1 0 auto;
+    .fa, .fab, .fad, .fal, .far, .fas {
+        font-size: 64px;
+    }
 }
-
-.staff-title {
+.staff-list-item__title {
     font-size: 24px;
-    line-height: 32px;
-    margin-bottom: 8px;
+    margin-bottom: 16px;
 }
-.staff-description {
-    color: #666;
-    margin-bottom: 0;
-}
+.staff-list-item__description {
 
-.staff-photo {
-    width: 160px;
-    height: 160px;
-    background-color: var(--orange);
-    flex-shrink: 0;
-    margin-right: 32px;
-    border-radius: 80px;
 }

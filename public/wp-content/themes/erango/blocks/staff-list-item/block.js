@@ -1,147 +1,72 @@
-( function( blocks, editor, i18n, element, components, _ ) {
-	var __ = i18n.__;
-	var el = element.createElement;
-	var RichText = editor.RichText;
-	var MediaUpload = editor.MediaUpload;
+(function (blocks, editor, element, blockEditor) {
+    var el = element.createElement;
+    var RichText = editor.RichText;
+    var InnerBlocks = blockEditor.InnerBlocks;
 
-	blocks.registerBlockType( 'erango/erango-staff-list-item', {
-		parent: 'erango/erango-staff-list',
-		title: 'Staff List Item',
-		icon: 'index-card',
-		category: 'layout',
-		attributes: {
-			name: {
+    blocks.registerBlockType('erango/erango-staff-list-item', {
+        parent: ['erango/erango-staff-list'],
+        title: 'Staff List Item',
+        icon: 'universal-access-alt',
+        category: 'layout',
+        example: {},
+        attributes: {
+			staff_title: {
 				type: 'array',
 				source: 'children',
-				selector: 'h2',
+				selector: 'h3',
 			},
-			mediaID: {
-				type: 'number',
-			},
-			mediaURL: {
-				type: 'string',
-				source: 'attribute',
-				selector: 'img',
-				attribute: 'src',
-			},
-			ingredients: {
-				type: 'array',
-				source: 'children',
-				selector: '.ingredients',
-			},
-			instructions: {
-				type: 'array',
-				source: 'children',
-				selector: '.steps',
-			},
+            staff_description: {
+                type: 'array',
+                source: 'children',
+                selector: 'p',
+            }
 		},
-
-		example: {},
-
-		edit: function( props ) {
-			var attributes = props.attributes;
-
-			var onSelectImage = function( media ) {
-				return props.setAttributes( {
-					mediaURL: media.url,
-					mediaID: media.id,
-				} );
-			};
-
-			return el(
-				'div',
-				{ className: props.className },
-				el( RichText, {
-					tagName: 'h2',
-					inline: true,
-					placeholder: 'Title',
-					value: attributes.title,
-					onChange: function( value ) {
-						props.setAttributes( { title: value } );
-					},
-				} ),
-				el(
-					'div',
-					{ className: 'recipe-image' },
-					el( MediaUpload, {
-						onSelect: onSelectImage,
-						allowedTypes: 'image',
-						value: attributes.mediaID,
-						render: function( obj ) {
-							return el(
-								components.Button,
-								{
-									className: attributes.mediaID
-										? 'image-button'
-										: 'button button-large',
-									onClick: obj.open,
-								},
-								! attributes.mediaID
-									? 'Upload Image'
-									: el( 'img', { src: attributes.mediaURL } )
-							);
-						},
-					} )
-				),
-				el( 'h3', {}, 'Ingredients' ),
-				el( RichText, {
-					tagName: 'ul',
-					multiline: 'li',
-					placeholder: 'Write a list of ingredients…',
-					value: attributes.ingredients,
-					onChange: function( value ) {
-						props.setAttributes( { ingredients: value } );
-					},
-					className: 'ingredients',
-				} ),
-				el( 'h3', {}, 'Instructions' ),
-				el( RichText, {
-					tagName: 'div',
-					inline: false,
-					placeholder: 'Write instructions…',
-					value: attributes.instructions,
-					onChange: function( value ) {
-						props.setAttributes( { instructions: value } );
-					},
-				} )
-			);
-		},
-		save: function( props ) {
-			var attributes = props.attributes;
-
-			return el(
-				'div',
-				{ className: props.className },
-				el( RichText.Content, {
-					tagName: 'h2',
-					value: attributes.title,
-				} ),
-				attributes.mediaURL &&
-					el(
-						'div',
-						{ className: 'recipe-image' },
-						el( 'img', { src: attributes.mediaURL } )
-					),
-				el( 'h3', {}, 'Ingredients' ),
-				el( RichText.Content, {
-					tagName: 'ul',
-					className: 'ingredients',
-					value: attributes.ingredients,
-				} ),
-				el( 'h3', {}, 'Instructions' ),
-				el( RichText.Content, {
-					tagName: 'div',
-					className: 'steps',
-					value: attributes.instructions,
-				} )
-			);
-		},
-	} );
-} )(
-	window.wp.blocks,
-	window.wp.editor,
-	window.wp.i18n,
-	window.wp.element,
-	window.wp.components,
-	window._
-);
+        edit: function (props) {
+            var staff_title = props.attributes.staff_title;
+            function onChangeStaffTitle( new_staff_title ) {
+                props.setAttributes( { staff_title: new_staff_title } );
+            }
+            var staff_description = props.attributes.staff_description;
+            function onChangeStaffDescription( new_staff_description ) {
+                props.setAttributes( { staff_description: new_staff_description } );
+            }
+            
+            return el('div', { className: 'staff-list-item' },
+                        el('div', { className: 'staff-list-item__icon' }, el( InnerBlocks, { allowedBlocks: ['core/html'] } )),
+                        el('div', { className: 'staff-list-item__content' },
+                            el( RichText, {
+                                tagName: 'h3',
+                                className: 'staff-list-item__title',
+                                placeholder: 'Staff title',
+                                onChange: onChangeStaffTitle,
+                                value: staff_title,
+                            } ),
+                            el( RichText, {
+                                tagName: 'p',
+                                className: 'staff-list-item__description',
+                                placeholder: 'Staff content.',
+                                onChange: onChangeStaffDescription,
+                                value: staff_description,
+                            } )
+                        )
+                );
+        },
+        save: function (props) {
+            return el('div', { className: 'staff-list-item' },
+                        el('div', { className: 'staff-list-item__icon' }, el(InnerBlocks.Content)),
+                        el('div', { className: 'staff-list-item__content' },
+                            el( RichText.Content, {
+                                tagName: 'h3',
+                                className: 'staff-list-item__title',
+                                value: props.attributes.staff_title,
+                            } ),
+                            el( RichText.Content, {
+                                tagName: 'p',
+                                className: 'feature-list-item__description',
+                                value: props.attributes.staff_description,
+                            } )
+                        )
+                );
+        },
+    });
+})(window.wp.blocks, window.wp.editor, window.wp.element, window.wp.blockEditor);

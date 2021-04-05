@@ -8,6 +8,8 @@ require get_stylesheet_directory() . '/blocks/feature-cards/index.php';
 require get_stylesheet_directory() . '/blocks/feature-card/index.php';
 require get_stylesheet_directory() . '/blocks/feature-list/index.php';
 require get_stylesheet_directory() . '/blocks/feature-list-item/index.php';
+require get_stylesheet_directory() . '/blocks/staff-list/index.php';
+require get_stylesheet_directory() . '/blocks/staff-list-item/index.php';
 require get_stylesheet_directory() . '/blocks/contact-links/index.php';
 
 /**

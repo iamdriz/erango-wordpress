@@ -14,6 +14,7 @@
 .post-list .post-thumbnail img {
     border-radius: 16px 16px 0 0;
     width: 100%;
+    max-height: 320px;
     object-fit: cover;
 }
 .post-list .post-content {
@@ -53,6 +54,8 @@
     width: 90%;
     @media (min-width: 992px) {
         width: 66.6%;
+        padding-top: 48px;
+        padding-bottom: 48px;
     }
     margin-left: auto;
     margin-right: auto;
@@ -67,7 +70,6 @@
 }
 .post-list--special .post:nth-child(1) .post-thumbnail img {
     border-radius: 0 0 16px 16px;
-    max-height: 320px;
 }
 
 @media (min-width: 992px) {

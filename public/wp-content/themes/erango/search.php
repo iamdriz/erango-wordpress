@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 
-<div class="sub-header">
+<div class="sub-header sub-header--off-white">
   <div class="container">
-    <h1>Search</h1>
+    <h1 class="sub-header__title">Search</h1>
   </div>
 </div>
 
