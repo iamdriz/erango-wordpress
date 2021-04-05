@@ -6,6 +6,8 @@ require get_stylesheet_directory() . '/blocks/panel/index.php';
 require get_stylesheet_directory() . '/blocks/masthead/index.php';
 require get_stylesheet_directory() . '/blocks/feature-cards/index.php';
 require get_stylesheet_directory() . '/blocks/feature-card/index.php';
+require get_stylesheet_directory() . '/blocks/feature-list/index.php';
+require get_stylesheet_directory() . '/blocks/feature-list-item/index.php';
 require get_stylesheet_directory() . '/blocks/contact-links/index.php';
 
 /**
@@ -224,7 +226,6 @@ function client_post_type() {
 		'not_found_in_trash' => __('No Clients found in Trash'), 
 		'parent_item_colon' => '',
 		'menu_name' => 'Clients'
-	
 	);
 	
 	$args = array(
@@ -255,7 +256,7 @@ function client_slider() {
     $clients_html = '<div class="clients">';
     $clients_query = new WP_Query('post_type=client&posts_per_page=999');
     while ($clients_query->have_posts()) : $clients_query->the_post();
-        $clients_html .= '<div class="client">' . the_title() . '</div>';
+        $clients_html .= '<div class="client"><a href="' . the_permalink() . '">' . (has_post_thumbnail() ? the_post_thumbnail() : the_title()) . '</a></div>';
     endwhile;
     $clients_html .= '</div>';
     return $clients_html;
