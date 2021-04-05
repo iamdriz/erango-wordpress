@@ -3,15 +3,11 @@
 		<?php $count = $wp_query->current_post+1; ?>
 		<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">         
 			<figure class="post-thumbnail">
-			<?php if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
-				//echo '<a href="'.get_permalink().'">';
-				//the_post_thumbnail(array(150,150));
-				//echo '</a>';
-				//echo '<a href="'.get_permalink().'"><img src="'. get_bloginfo('template_directory') .'/img/thumbnail-placeholder.png" alt="Blog thumbnail" /></a>';
-			} else {
-				//echo '<a href="'.get_permalink().'"><img src="'. get_bloginfo('template_directory') .'/img/thumbnail-placeholder.png" alt="Blog thumbnail" /></a>';
-			}?>
-				<a href="<?php echo get_permalink(); ?>"><img src="https://picsum.photos/1920/1080?random=<?php the_ID(); ?>" width="1920" height="1080"></a>
+				<?php if ( has_post_thumbnail() ) { ?>
+					<a href="<?php echo get_permalink(); ?>"><?php echo the_post_thumbnail(); ?></a>
+				<?php } else { ?>
+					<a href="<?php echo get_permalink(); ?>"><img src="https://picsum.photos/1920/1080?random=<?php the_ID(); ?>" width="1920" height="1080"></a>
+				<?php } ?>		
 			</figure>
 			<section class="post-content">
 				<h2 class="post-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>

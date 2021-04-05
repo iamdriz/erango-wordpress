@@ -9,7 +9,7 @@ function erango_staff_list_item_register_block() {
 	wp_register_script(
 		'erango-staff-list-item',
 		get_stylesheet_directory_uri() . '/blocks/staff-list-item/block.js',
-		array( 'wp-blocks', 'wp-editor', 'wp-element', 'wp-block-editor' ),
+		array( 'wp-blocks', 'wp-editor', 'wp-element', 'wp-block-editor', 'wp-components' ),
 		filemtime( get_stylesheet_directory() . '/blocks/staff-list-item/block.js' )
 	);
 

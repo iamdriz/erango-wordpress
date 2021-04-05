@@ -9,6 +9,7 @@
     .staff-list > .staff-list-item {
         display: flex;
         flex-flow: row nowrap;
+        align-items: center;
         width: 48%;
         margin-right: 4%;
         margin-top: 4%;
@@ -29,6 +30,7 @@
     .staff-list > .staff-list-item {
         display: flex;
         flex-flow: row nowrap;
+        align-items: center;
         width: 100%;
         margin-top: 4%;
         &:nth-child(1) {
@@ -57,17 +59,18 @@
     }
 }
 .staff-list-item__icon {
-    background-color: var(--off-white);
-    color: var(--orange);
+    background-color: var(--white);
+    border: var(--orange) 2px solid;
     width: 128px;
     height: 128px;
     border-radius: 999em;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    flex: 1 0 auto;
-    .fa, .fab, .fad, .fal, .far, .fas {
-        font-size: 64px;
+    flex: 0 0 auto;
+    img {
+        max-height: 96px;
+        border-radius: 999em;
     }
 }
 .staff-list-item__title {
@@ -75,5 +78,5 @@
     margin-bottom: 16px;
 }
 .staff-list-item__description {
-
+    margin-bottom: 0;
 }
