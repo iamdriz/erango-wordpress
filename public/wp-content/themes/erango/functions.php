@@ -194,14 +194,73 @@ add_theme_support( 'responsive-embeds' );
 add_theme_support( 'custom-spacing' );
 add_theme_support( 'experimental-link-color' );
 
+// function erango_block_categories( $categories, $post ) {
+// 	return array_merge(
+// 		$categories,
+// 		array(
+// 			array(
+// 				'slug' => 'erango-blocks',
+// 				'title' => 'Erango Blocks',
+// 			),
+// 		)
+// 	);
+// }
+// add_filter( 'block_categories', 'erango_block_categories', 10, 2);
 
-function client_slider_function() {
-    return '<div class="clients">
-            <div class="client"><img src="' . get_stylesheet_directory_uri() . '/assets/img/client.png"></div>
-            <div class="client"><img src="' . get_stylesheet_directory_uri() . '/assets/img/client.png"></div>
-        </div>';
+add_theme_support( 'post-thumbnails' );
+
+// Client Custom Post Type
+function client_post_type() {	
+	$labels = array(
+		'name' => _x('Client', 'post type general name'),
+		'singular_name' => _x('Client', 'post type singular name'),
+		'add_new' => _x('Add New', 'client'),
+		'add_new_item' => __('Add New Client'),
+		'edit_item' => __('Edit Client'),
+		'new_item' => __('New Client'),
+		'view_item' => __('View Client'),
+		'search_items' => __('Search Clients'),
+		'not_found' =>  __('No Clients found'),
+		'not_found_in_trash' => __('No Clients found in Trash'), 
+		'parent_item_colon' => '',
+		'menu_name' => 'Clients'
+	
+	);
+	
+	$args = array(
+		'labels' => $labels,
+		'public' => true,
+		'publicly_queryable' => true,
+		'show_ui' => true, 
+		'show_in_menu' => true,
+		'_builtin' => false,
+		'_edit_link' => 'post.php?post=%d',
+		'query_var' => true,
+		'rewrite' => array('slug' => 'clients', 'with_front' => false),
+		'capability_type' => 'post',
+		'has_archive' => false, 
+		'hierarchical' => false,
+		'supports' => array('title', 'thumbnail'),
+		'menu_position' => 5
+	);
+	
+	register_post_type('client', $args);
+}
+add_action( 'init', 'client_post_type' );
+
+
+// Client Slider (loads in the post types)
+/* BUG... if you have less clients than the expected on the settings they don't show :( */
+function client_slider() {
+    $clients_html = '<div class="clients">';
+    $clients_query = new WP_Query('post_type=client&posts_per_page=999');
+    while ($clients_query->have_posts()) : $clients_query->the_post();
+        $clients_html .= '<div class="client">' . the_title() . '</div>';
+    endwhile;
+    $clients_html .= '</div>';
+    return $clients_html;
 }
 function register_shortcodes(){
-    add_shortcode('client-slider', 'client_slider_function');
+    add_shortcode('client-slider', 'client_slider');
 }
 add_action( 'init', 'register_shortcodes');

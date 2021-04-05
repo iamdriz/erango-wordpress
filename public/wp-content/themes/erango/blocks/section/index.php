@@ -9,7 +9,7 @@ function erango_section_register_block() {
 	wp_register_script(
 		'erango-section-block',
 		get_stylesheet_directory_uri() . '/blocks/section/block.js',
-		array( 'wp-blocks', 'wp-element', 'wp-block-editor' ),
+		array( 'wp-blocks', 'wp-element', 'wp-block-editor', 'wp-editor', 'wp-components' ),
 		filemtime( get_stylesheet_directory() . '/blocks/section/block.js' )
 	);
 

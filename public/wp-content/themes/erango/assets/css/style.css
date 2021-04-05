@@ -17614,12 +17614,13 @@ input[type=submit]:hover {
   background-color: var(--blue);
 }
 
-/* add sections to handle different background colors */
+.header .wp-block-button__link.has-orange-background-color,
 .section--blue .wp-block-button__link.has-orange-background-color {
   color: var(--white);
   background-color: var(--orange);
 }
 
+.header .wp-block-button__link.has-orange-background-color:hover,
 .section--blue .wp-block-button__link.has-orange-background-color:hover {
   color: var(--blue);
   background-color: var(--white);

@@ -17,7 +17,7 @@
 		<section class="section section--off-white">
 			<div class="container">
 
-			<div class="prose mmm">
+			<div class="mmm">
 				<div class="mmm__inner">
 					<?php the_content('<p class="serif">' . __('Read the rest of this entry &raquo;', 'kubrick') . '</p>'); ?>
 
@@ -83,12 +83,12 @@
 
 <?php endif; ?>
 
-<section class="section section--off-white">
+<?php /*<section class="section section--off-white">
 	<div class="container">
 		<div class="navigation">
 			<div class="alignleft"><?php previous_post_link( '%link', '&laquo; %title' ) ?></div>
 			<div class="alignright"><?php next_post_link( '%link', '%title &raquo;' ) ?></div>
 		</div>
 	</div>
-</section>
+</section>*/ ?>
 <?php get_footer(); ?>
