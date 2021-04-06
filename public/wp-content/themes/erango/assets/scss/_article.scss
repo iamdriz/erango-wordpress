@@ -39,10 +39,10 @@
 
 .article-panel {
     background-color: var(--white);
-    padding-left: 64px;
-    padding-right: 64px;
     border-radius: 16px;
     margin-top: -128px;
+    padding-left: 64px;
+    padding-right: 64px;
     margin-left: -64px;
     margin-right: -64px;
     margin-bottom: 48px;
@@ -53,10 +53,15 @@
         padding-bottom: 64px;
     }
 }
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
     .article-panel__inner {
-        width: 66.6%;
+        max-width: 66.6%;
         margin-left: auto;
         margin-right: auto;
     }
+}
+
+.article-panel ul,
+.article-panel ol {
+    list-style-position: inside;
 }

@@ -14,13 +14,17 @@
   --off-white: rgb(238, 238, 238);
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 body {
   font-size: 16px;
   line-height: 1.5;
   font-family: "Poppins", sans-serif;
   background-color: var(--blue);
   color: var(--white);
-  overflow-x: hidden;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -769,10 +773,10 @@ body {
 
 .article-panel {
   background-color: var(--white);
-  padding-left: 64px;
-  padding-right: 64px;
   border-radius: 16px;
   margin-top: -128px;
+  padding-left: 64px;
+  padding-right: 64px;
   margin-left: -64px;
   margin-right: -64px;
   margin-bottom: 48px;
@@ -786,13 +790,18 @@ body {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .article-panel__inner {
-    width: 66.6%;
+    max-width: 66.6%;
     margin-left: auto;
     margin-right: auto;
   }
 }
+.article-panel ul,
+.article-panel ol {
+  list-style-position: inside;
+}
+
 .pagination {
   list-style: none;
   display: flex;
@@ -974,7 +983,7 @@ body {
   min-height: 640px;
   max-height: 75vh;
   height: 100vh;
-  background-image: url("../img/masthead4.svg");
+  background-image: url("../img/masthead5.svg");
   background-repeat: no-repeat;
   background-position: top center;
   background-size: auto 100%;
