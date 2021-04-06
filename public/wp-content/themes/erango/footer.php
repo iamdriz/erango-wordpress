@@ -4,29 +4,29 @@
     <div class="container">
         <div class="footer-columns">
             <div class="footer-column footer-column--left">
-                <p>Erango is part of the <a href="https://www.nicholasassociatesgroup.co.uk" target="_blank">Nicholas Associates Group of Companies</a>.</p>
-                <p>Registered in England - Company number: 03606174 - VAT Registration no: GB727824120</p>
+                <p data-selector="left_text"><?php echo get_theme_mod('left_text', 'Erango is part of the Nicholas Associates Group of Companies.'); ?></p>
+                <p data-selector="left_text_2"><?php echo get_theme_mod('left_text_2', 'Registered in England - Company number: 03606174 - VAT Registration no: GB727824120'); ?></p>
             </div>
             <div class="footer-column footer-column--center">
                 <ul class="social">
                     <li class="social-item">
-                        <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i
+                        <a data-selector="social_twitter" href="<?php echo get_theme_mod('social_twitter', 'https://twitter.com'); ?>" target="_blank" aria-label="Twitter"><i
                                 class="fab fa-twitter"></i></a>
                     </li>
                     <li class="social-item">
-                        <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i
+                        <a data-selector="social_facebook" href="<?php echo get_theme_mod('social_twitter', 'https://www.facebook.com'); ?>" target="_blank" aria-label="Facebook"><i
                                 class="fab fa-facebook"></i></a>
                     </li>
                     <li class="social-item">
-                        <a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i
+                        <a data-selector="social_instagram" href="<?php echo get_theme_mod('social_twitter', 'https://www.instagram.com'); ?>" target="_blank" aria-label="Instagram"><i
                                 class="fab fa-instagram"></i></a>
                     </li>
                     <li class="social-item">
-                        <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn"><i
+                        <a data-selector="social_linkedin" href="<?php echo get_theme_mod('social_twitter', 'https://www.linkedin.com'); ?>" target="_blank" aria-label="LinkedIn"><i
                                 class="fab fa-linkedin"></i></a>
                     </li>
                 </ul>
-                <p>Copyright &copy; <?php echo date('Y'); ?> Nicholas Associates Group Limited. All rights reserved.</p>
+                <p><?php echo str_replace('[Y]', date('Y'), get_theme_mod('copyright_content', 'Copyright &copy; [Y] Nicholas Associates Group Limited. All rights reserved.')); ?></p>
             </div>
             <div class="footer-column footer-column--right">
                 <nav class="footer-nav">

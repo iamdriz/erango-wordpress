@@ -267,3 +267,225 @@ function register_shortcodes(){
     add_shortcode('client-slider', 'client_slider');
 }
 add_action( 'init', 'register_shortcodes');
+
+
+function customize_footer( $wp_customize ) {
+    // $wp_customize->add_panel( 
+    //     'footer_section', 
+    //     array(
+    //         'priority'      => 34,
+    //         'capability'    => 'edit_theme_options',
+    //         'title'			=> 'Footer',
+    //     ) 
+    // );
+
+    // $wp_customize->add_section(
+    //     'footer_copyright',
+    //     array(
+    //         'title' 		=> 'Copyright Section',
+    //         'panel'  		=> 'footer_section',
+    //     )
+    // );
+
+    // $wp_customize->add_section(
+    //     'footer_social',
+    //     array(
+    //         'title' => 'Social',
+    //         'panel' => 'footer_section',
+    //     )
+    // );
+
+    $wp_customize->add_section(
+        'footer_section',
+        array(
+            'title' => 'Footer',
+            'priority' => 34
+        )
+    );
+
+    $wp_customize->add_setting(
+    	'left_text',
+    	array(
+	        'default'			=> 'Erango is part of the Nicholas Associates Group of Companies.',
+			'capability'     	=> 'edit_theme_options',
+			//'sanitize_callback' => 'erango_sanitize_html'
+		)
+	);
+    $wp_customize->add_setting(
+    	'left_text_2',
+    	array(
+	        'default'			=> 'Registered in England - Company number: 03606174 - VAT Registration no: GB727824120',
+			'capability'     	=> 'edit_theme_options',
+			//'sanitize_callback' => 'erango_sanitize_html'
+		)
+	);
+
+	$wp_customize->add_setting(
+    	'copyright_content',
+    	array(
+	        'default'			=> 'Copyright &copy; [date] Nicholas Associates Group Limited. All rights reserved.',
+			'capability'     	=> 'edit_theme_options',
+			//'sanitize_callback' => 'erango_sanitize_html'
+		)
+	);
+
+    $wp_customize->add_setting(
+        'social_twitter',
+        array(
+            'default' => 'https://twitter.com',
+            'capability' => 'edit_theme_options'
+        )
+    );
+    $wp_customize->add_setting(
+        'social_facebook',
+        array(
+            'default' => 'https://www.facebook.com',
+            'capability' => 'edit_theme_options'
+        )
+    );
+    $wp_customize->add_setting(
+        'social_instagram',
+        array(
+            'default' => 'https://www.instagram.com',
+            'capability' => 'edit_theme_options'
+        )
+    );
+    $wp_customize->add_setting(
+        'social_linkedin',
+        array(
+            'default' => 'https://www.linkedin.com',
+            'capability' => 'edit_theme_options'
+        )
+    );
+
+	$wp_customize->add_control( 
+		'left_text',
+		array(
+		    'label'   		=> 'Left Text',
+		    'section'		=> 'footer_section',
+			'type' 			=> 'textarea',
+			'priority' => 5,
+		)  
+	);
+
+    $wp_customize->add_control( 
+		'left_text_2',
+		array(
+		    'label'   		=> 'Left Text 2',
+		    'section'		=> 'footer_section',
+			'type' 			=> 'textarea',
+			'priority' => 5,
+		)  
+	);
+
+    $wp_customize->add_control( 
+		'copyright_content',
+		array(
+		    'label'   		=> 'Copyright Content',
+		    'section'		=> 'footer_section',
+			'type' 			=> 'textarea',
+			'priority' => 5,
+		)  
+	);
+
+    $wp_customize->add_control( 
+		'social_twitter',
+		array(
+		    'label'   		=> 'Twitter',
+		    'section'		=> 'footer_section',
+			'type' 			=> 'text',
+			'priority' => 5,
+		)  
+	);
+    $wp_customize->add_control( 
+		'social_facebook',
+		array(
+		    'label'   		=> 'Facebook',
+		    'section'		=> 'footer_section',
+			'type' 			=> 'text',
+			'priority' => 5,
+		)  
+	);
+    $wp_customize->add_control( 
+		'social_instagram',
+		array(
+		    'label'   		=> 'Instagram',
+		    'section'		=> 'footer_section',
+			'type' 			=> 'text',
+			'priority' => 5,
+		)  
+	);
+    $wp_customize->add_control( 
+		'social_linkedin',
+		array(
+		    'label'   		=> 'LinkedIn',
+		    'section'		=> 'footer_section',
+			'type' 			=> 'text',
+			'priority' => 5,
+		)  
+	);
+
+    $wp_customize->selective_refresh->add_partial(
+		'copyright_content', array(
+			'selector' => '.footer-column--center p',
+			'container_inclusive' => true,
+			//'render_callback' => 'footer_copyright',
+			'fallback_refresh' => true,
+		)
+	);
+
+    $wp_customize->selective_refresh->add_partial(
+		'left_text', array(
+			'selector' => '[data-selector="left_text"]',
+			'container_inclusive' => true,
+			//'render_callback' => 'footer_copyright',
+			'fallback_refresh' => true,
+		)
+	);
+
+    $wp_customize->selective_refresh->add_partial(
+		'left_text_2', array(
+			'selector' => '[data-selector="left_text_2"]',
+			'container_inclusive' => true,
+			//'render_callback' => 'footer_copyright',
+			'fallback_refresh' => true,
+		)
+	);
+
+    $wp_customize->selective_refresh->add_partial(
+		'social_twitter', array(
+			'selector' => '[data-selector="social_twitter"]',
+			'container_inclusive' => true,
+			//'render_callback' => 'footer_copyright',
+			'fallback_refresh' => true,
+		)
+	);
+
+    $wp_customize->selective_refresh->add_partial(
+		'social_facebook', array(
+			'selector' => '[data-selector="social_facebook"]',
+			'container_inclusive' => true,
+			//'render_callback' => 'footer_copyright',
+			'fallback_refresh' => true,
+		)
+	);
+
+    $wp_customize->selective_refresh->add_partial(
+		'social_instagram', array(
+			'selector' => '[data-selector="social_instagram"]',
+			'container_inclusive' => true,
+			//'render_callback' => 'footer_copyright',
+			'fallback_refresh' => true,
+		)
+	);
+
+    $wp_customize->selective_refresh->add_partial(
+		'social_linkedin', array(
+			'selector' => '[data-selector="social_linkedin"]',
+			'container_inclusive' => true,
+			//'render_callback' => 'footer_copyright',
+			'fallback_refresh' => true,
+		)
+	);
+}
+add_action( 'customize_register', 'customize_footer' );

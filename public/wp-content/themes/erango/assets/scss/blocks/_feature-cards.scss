@@ -5,8 +5,16 @@
     margin-top: 32px;
     margin-bottom: 32px;
 }
+.feature-cards > .block-editor-inner-blocks,
+.feature-cards > .block-editor-inner-blocks > .block-editor-block-list__layout {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
 
 @media (min-width: 992px) {
+    .feature-cards [data-type="erango/erango-feature-card"],
     .feature-cards > .feature-card {
         width: 23%;
         margin-right: 2%;
@@ -24,6 +32,7 @@
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+    .feature-cards [data-type="erango/erango-feature-card"],
     .feature-cards > .feature-card {
         width: 48%;
         margin-right: 4%;
@@ -39,6 +48,7 @@
 }
 
 @media (max-width: 767px) {
+    .feature-cards [data-type="erango/erango-feature-card"],
     .feature-cards > .feature-card {
         width: 100%;
         margin-top: 4%;
