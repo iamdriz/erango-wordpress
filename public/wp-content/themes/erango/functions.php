@@ -323,7 +323,7 @@ function customize_footer( $wp_customize ) {
 	$wp_customize->add_setting(
     	'copyright_content',
     	array(
-	        'default'			=> 'Copyright &copy; [date] Nicholas Associates Group Limited. All rights reserved.',
+	        'default'			=> 'Copyright &copy; [Y] Nicholas Associates Group Limited. All rights reserved.',
 			'capability'     	=> 'edit_theme_options',
 			//'sanitize_callback' => 'erango_sanitize_html'
 		)

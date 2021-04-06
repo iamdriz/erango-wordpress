@@ -97,7 +97,13 @@
 }
 
 .staff-list-item__title {
-    font-size: 24px;
+    font-size: 20px;
+    @media (min-width: 768px) {
+        font-size: 24px;
+    }
+    @media (min-width: 992px) {
+        font-size: 28px;
+    }
     margin-top: 0;
     margin-bottom: 16px;
 }
