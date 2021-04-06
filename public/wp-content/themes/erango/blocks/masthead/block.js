@@ -29,7 +29,8 @@
                             onChange: onChangeContent,
                             value: content,
                         } )
-                    )
+                    ),
+                    el('div', { className: 'masthead__image'} )
                 );
         },
         save: function (props) {
@@ -41,7 +42,8 @@
                             className: 'masthead__title',
                             value: props.attributes.content,
                         } )
-                    )
+                    ),
+                    el('div', { className: 'masthead__image'} )
                 );
         },
     });
