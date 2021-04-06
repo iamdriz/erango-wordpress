@@ -14,6 +14,14 @@
     color: var(--orange);
 }
 
+.article-header__title {
+    @media (min-width: 992px) {
+        max-width: 66.6666666667%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 .article-header__meta {
     list-style: none;
     color: var(--orange);

@@ -16756,7 +16756,7 @@ h1 {
     font-size: 40px;
   }
 }
-@media (min-width: 1300px) {
+@media (min-width: 992px) {
   h1 {
     font-size: 48px;
   }
@@ -17410,6 +17410,14 @@ body {
 
 .article-header a {
   color: var(--orange);
+}
+
+@media (min-width: 992px) {
+  .article-header__title {
+    max-width: 66.6666666667%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .article-header__meta {
@@ -18090,8 +18098,19 @@ input[type=submit]:hover {
 }
 
 .sub-header__title {
-  font-size: 40px;
+  font-size: 32px;
+  margin-top: 0;
   margin-bottom: 0;
+}
+@media (min-width: 768px) {
+  .sub-header__title {
+    font-size: 36px;
+  }
+}
+@media (min-width: 992px) {
+  .sub-header__title {
+    font-size: 40px;
+  }
 }
 
 .feature-cards {
